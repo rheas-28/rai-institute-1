@@ -1,13 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import resourceHandbook from "@/assets/resource-handbook.jpg";
+import resourceFramework from "@/assets/resource-framework.jpg";
+import resourceChecklist from "@/assets/resource-checklist.jpg";
+import resourceToolkit from "@/assets/resource-toolkit.jpg";
 
 interface Resource {
   title: string;
   description: string;
   type: string;
   pages?: number;
+  image: string;
 }
 
 const ResourceHub = () => {
@@ -17,23 +22,27 @@ const ResourceHub = () => {
       description: "Comprehensive guide to implementing trustworthy AI systems in your organization.",
       type: "PDF Guide",
       pages: 145,
+      image: resourceHandbook,
     },
     {
       title: "RAISE Certification Framework",
       description: "Complete framework documentation and assessment criteria for RAISE pathways.",
       type: "Framework Document",
       pages: 89,
+      image: resourceFramework,
     },
     {
       title: "Compliance Checklist Template",
       description: "Ready-to-use templates for ISO 42001, NIST AI RMF, and EU AI Act compliance.",
       type: "Excel Template",
+      image: resourceChecklist,
     },
     {
       title: "AI Risk Assessment Toolkit",
       description: "Tools and methodologies for identifying and mitigating AI-related risks.",
       type: "Toolkit Bundle",
       pages: 67,
+      image: resourceToolkit,
     },
   ];
 
@@ -54,13 +63,20 @@ const ResourceHub = () => {
           {resources.map((resource, index) => (
             <Card
               key={index}
-              className="group hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/50 animate-fadeUp"
+              className="group hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/50 animate-fadeUp overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <FileText className="h-6 w-6 text-primary" />
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img
+                  src={resource.image}
+                  alt={resource.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                  <Download className="h-8 w-8 text-primary" />
                 </div>
+              </div>
+              <CardHeader>
                 <CardTitle className="text-lg group-hover:text-primary transition-colors">
                   {resource.title}
                 </CardTitle>

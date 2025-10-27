@@ -2,7 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import newsImage from "@/assets/news-updates.jpg";
+import blogEuAiAct from "@/assets/blog-eu-ai-act.jpg";
+import blogTransparentAi from "@/assets/blog-transparent-ai.jpg";
+import blogRiskManagement from "@/assets/blog-risk-management.jpg";
 
 interface BlogPost {
   title: string;
@@ -18,21 +20,21 @@ const BlogGrid = () => {
       title: "New EU AI Act Compliance Requirements for 2025",
       excerpt: "Understanding the latest regulatory changes and how they impact your AI governance strategy.",
       date: "2025-01-15",
-      image: newsImage,
+      image: blogEuAiAct,
       link: "/news",
     },
     {
       title: "ISO 42001 Certification: A Complete Guide",
       excerpt: "Step-by-step walkthrough of the ISO 42001 certification process and key requirements.",
       date: "2025-01-10",
-      image: newsImage,
+      image: blogTransparentAi,
       link: "/news",
     },
     {
       title: "Building Ethical AI Teams: Best Practices",
       excerpt: "How leading organizations are structuring their teams to ensure responsible AI development.",
       date: "2025-01-05",
-      image: newsImage,
+      image: blogRiskManagement,
       link: "/news",
     },
   ];

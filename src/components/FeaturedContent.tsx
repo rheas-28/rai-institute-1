@@ -2,6 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { PlayCircle, FileText, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import featuredWebinar from "@/assets/featured-webinar.jpg";
+import featuredCaseStudy from "@/assets/featured-case-study.jpg";
+import featuredWhitepaper from "@/assets/featured-whitepaper.jpg";
 
 interface FeaturedItem {
   title: string;
@@ -17,21 +20,21 @@ const FeaturedContent = () => {
       title: "Building Trust in AI Systems",
       description: "On-demand webinar covering best practices for implementing trustworthy AI governance frameworks in enterprise environments.",
       type: "webinar",
-      image: "/placeholder.svg",
+      image: featuredWebinar,
       link: "/news",
     },
     {
       title: "Financial Services AI Case Study",
       description: "How leading banks implemented RAISE certification to meet regulatory requirements and build customer trust.",
       type: "case-study",
-      image: "/placeholder.svg",
+      image: featuredCaseStudy,
       link: "/news",
     },
     {
       title: "2025 AI Governance Framework",
       description: "Comprehensive guide to aligning your AI systems with ISO 42001, EU AI Act, and NIST AI RMF standards.",
       type: "whitepaper",
-      image: "/placeholder.svg",
+      image: featuredWhitepaper,
       link: "/tools-guides",
     },
   ];
@@ -68,7 +71,7 @@ const FeaturedContent = () => {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/50 animate-fadeUp"
+                className="group hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/50 animate-fadeUp overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden rounded-t-lg">

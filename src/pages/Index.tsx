@@ -12,7 +12,7 @@ import Newsletter from "@/components/Newsletter";
 import { Shield, Scale, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-ai-network.jpg";
+import heroImage from "@/assets/hero-ai-governance-network.jpg";
 import logo1 from "@/assets/logo-placeholder-1.png";
 import logo2 from "@/assets/logo-placeholder-2.png";
 import logo3 from "@/assets/logo-placeholder-3.png";

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
+import newsImage from "@/assets/news-updates.jpg";
 
 const News = () => {
   const newsItems = [
@@ -63,6 +64,7 @@ const News = () => {
       <Hero
         title="Latest News & Updates"
         description="Stay informed about new certifications, partnerships, research, and developments in the responsible AI ecosystem."
+        backgroundImage={newsImage}
       />
 
       <section className="py-20">

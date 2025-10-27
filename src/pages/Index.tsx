@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Shield, Award, BookOpen, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-ai-network.jpg";
 
 const Index = () => {
   const features = [
@@ -56,6 +57,7 @@ const Index = () => {
         ctaLink="/join"
         secondaryCtaText="Explore RAISE Pathways"
         secondaryCtaLink="/raise-pathways"
+        backgroundImage={heroImage}
       />
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />

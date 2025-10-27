@@ -4,6 +4,7 @@ import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { FileText, Wrench, BookOpen, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import toolsImage from "@/assets/tools-frameworks.jpg";
 
 const ToolsGuides = () => {
   const resources = [
@@ -69,6 +70,7 @@ const ToolsGuides = () => {
       <Hero
         title="Tools & Guides for Trustworthy AI"
         description="Practical resources to help your organization implement responsible AI practices at every stage of the development lifecycle."
+        backgroundImage={toolsImage}
       />
 
       <CardGrid

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Clock, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import careersImage from "@/assets/careers-workplace.jpg";
 
 const Careers = () => {
   const openings = [
@@ -53,6 +54,7 @@ const Careers = () => {
       <Hero
         title="Join Our Team"
         description="Help us build the future of trustworthy AI. We're looking for passionate individuals committed to responsible innovation."
+        backgroundImage={careersImage}
       />
 
       <section className="py-20">

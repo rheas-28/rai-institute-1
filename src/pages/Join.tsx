@@ -4,6 +4,7 @@ import CardGrid from "@/components/CardGrid";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import { Check } from "lucide-react";
+import communityImage from "@/assets/community-network.jpg";
 
 const Join = () => {
   const membershipTiers = [
@@ -88,6 +89,7 @@ const Join = () => {
       <Hero
         title="Join Our Community"
         description="Become part of a global network of organizations and professionals committed to building trustworthy AI systems."
+        backgroundImage={communityImage}
       />
 
       <CardGrid

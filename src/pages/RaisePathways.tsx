@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { CheckCircle, FileCheck, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import certificationImage from "@/assets/certification-pathways.jpg";
 
 const RaisePathways = () => {
   const pathways = [
@@ -49,6 +50,7 @@ const RaisePathways = () => {
         description="Structured certification programs that help organizations build, deploy, and maintain trustworthy AI systems aligned with global standards."
         ctaText="Start Your Certification"
         ctaLink="/join"
+        backgroundImage={certificationImage}
       />
 
       <CardGrid

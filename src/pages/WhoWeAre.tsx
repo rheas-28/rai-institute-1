@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { Target, Heart, Globe, Lightbulb } from "lucide-react";
+import teamImage from "@/assets/team-collaboration.jpg";
 
 const WhoWeAre = () => {
   const values = [
@@ -35,6 +36,7 @@ const WhoWeAre = () => {
       <Hero
         title="About the Responsible AI Institute"
         description="We are a nonprofit organization dedicated to advancing trustworthy AI through standards-aligned certification, comprehensive resources, and a global community of practice."
+        backgroundImage={teamImage}
       />
 
       <section className="py-20">

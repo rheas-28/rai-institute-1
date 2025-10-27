@@ -43,12 +43,13 @@ const CardGrid = ({ title, description, items, columns = 3 }: CardGridProps) => 
           {items.map((item, index) => (
             <Card
               key={index}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1 animate-fade-up group"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
                 {item.icon && (
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300">
+                    <item.icon className="w-7 h-7 text-primary group-hover:text-cobalt-light transition-colors" />
                   </div>
                 )}
                 <CardTitle className="text-foreground">{item.title}</CardTitle>

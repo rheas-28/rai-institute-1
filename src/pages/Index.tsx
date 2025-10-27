@@ -3,46 +3,52 @@ import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import LogoWall from "@/components/LogoWall";
 import Footer from "@/components/Footer";
-import { Shield, Award, BookOpen, Users } from "lucide-react";
+import { Shield, Scale, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ai-network.jpg";
+import logo1 from "@/assets/logo-placeholder-1.png";
+import logo2 from "@/assets/logo-placeholder-2.png";
+import logo3 from "@/assets/logo-placeholder-3.png";
+import logo4 from "@/assets/logo-placeholder-4.png";
+import logo5 from "@/assets/logo-placeholder-5.png";
+import logo6 from "@/assets/logo-placeholder-6.png";
 
 const Index = () => {
   const features = [
     {
-      title: "Standards-Aligned Certification",
+      title: "Governance & Compliance",
       description:
-        "RAISE Pathways provide structured certification for AI systems aligned with global standards and best practices.",
-      icon: Award,
+        "Structured frameworks aligned with global standards to ensure your AI systems meet regulatory requirements and ethical guidelines.",
+      icon: Scale,
     },
     {
-      title: "Comprehensive Resources",
+      title: "Risk & Assurance",
       description:
-        "Access tools, guides, and frameworks designed to help organizations build trustworthy AI at every stage.",
-      icon: BookOpen,
-    },
-    {
-      title: "Community & Membership",
-      description:
-        "Join a global network of AI practitioners, researchers, and organizations committed to responsible AI development.",
-      icon: Users,
-    },
-    {
-      title: "Risk Management",
-      description:
-        "Implement proven methodologies for identifying, assessing, and mitigating AI-related risks in your organization.",
+        "Comprehensive risk assessment and mitigation strategies to identify, monitor, and address AI-related vulnerabilities proactively.",
       icon: Shield,
+    },
+    {
+      title: "Alignment to Global Standards",
+      description:
+        "Certification pathways that align with ISO, NIST, EU AI Act, and other international frameworks for trustworthy AI.",
+      icon: Globe,
+    },
+    {
+      title: "Enterprise Readiness",
+      description:
+        "Practical tools and methodologies to accelerate your organization's journey to deploying production-ready responsible AI systems.",
+      icon: Rocket,
     },
   ];
 
   const logos = [
-    "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1614729939124-032a4e3a50f1?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?w=200&h=100&fit=crop",
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
+    logo6,
   ];
 
   return (
@@ -69,23 +75,24 @@ const Index = () => {
       />
 
       {/* Stats Section */}
-      <section className="py-20 bg-navy-darker">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+            <div className="animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">500+</div>
               <div className="text-muted-foreground">Member Organizations</div>
             </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+            <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">50+</div>
               <div className="text-muted-foreground">Countries Represented</div>
             </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">1,200+</div>
+            <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">1,200+</div>
               <div className="text-muted-foreground">Certified Systems</div>
             </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
+            <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">15+</div>
               <div className="text-muted-foreground">Standards Aligned</div>
             </div>
           </div>
@@ -93,9 +100,10 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-cobalt-light/5">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,118,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[gradient_15s_ease_infinite]"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Ready to Build Trustworthy AI?
             </h2>
@@ -103,7 +111,7 @@ const Index = () => {
               Join our community of organizations committed to responsible AI development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="glow">
                 <Link to="/join">Become a Member</Link>
               </Button>
               <Button asChild variant="secondary" size="lg">

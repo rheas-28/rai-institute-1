@@ -25,11 +25,11 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-24 md:py-32 overflow-hidden animate-fade-in"
       style={
         backgroundImage
           ? {
-              backgroundImage: `linear-gradient(to bottom, rgba(10, 22, 40, 0.9), rgba(10, 22, 40, 0.95)), url(${backgroundImage})`,
+              backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.92), rgba(42, 100, 246, 0.15)), linear-gradient(to bottom, rgba(10, 22, 40, 0.88), rgba(10, 22, 40, 0.95)), url(${backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }
@@ -37,7 +37,7 @@ const Hero = ({
       }
     >
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
           {subtitle && (
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <span className="text-sm font-medium text-primary">{subtitle}</span>
@@ -73,9 +73,10 @@ const Hero = ({
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cobalt-light/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cobalt-light/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       </div>
     </section>
   );

@@ -17,12 +17,13 @@ const LogoWall = ({ title, logos }: LogoWallProps) => {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center h-16 w-full opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="flex items-center justify-center h-16 w-full opacity-50 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0 hover:scale-110 animate-fade-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <img
                 src={logo}
                 alt={`Partner logo ${index + 1}`}
-                className="max-h-12 w-auto object-contain"
+                className="max-h-12 w-auto object-contain transition-all duration-500"
               />
             </div>
           ))}

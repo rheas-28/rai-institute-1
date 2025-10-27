@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           {/* Organization */}
-          <div>
+          <div className="border-l border-border/50 pl-6">
             <h3 className="text-foreground font-semibold mb-4">Organization</h3>
             <ul className="space-y-3">
               {footerLinks.organization.map((link) => (
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Programs */}
-          <div>
+          <div className="border-l border-border/50 pl-6">
             <h3 className="text-foreground font-semibold mb-4">Programs</h3>
             <ul className="space-y-3">
               {footerLinks.programs.map((link) => (
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Legal */}
-          <div>
+          <div className="border-l border-border/50 pl-6">
             <h3 className="text-foreground font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
@@ -113,7 +113,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-secondary hover:bg-primary transition-colors flex items-center justify-center group"
+                className="w-9 h-9 rounded-full bg-secondary hover:bg-primary transition-all duration-300 flex items-center justify-center group hover:scale-110 hover:shadow-lg hover:shadow-primary/30"
                 aria-label={social.label}
               >
                 <social.icon className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />

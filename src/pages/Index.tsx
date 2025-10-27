@@ -3,6 +3,12 @@ import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import LogoWall from "@/components/LogoWall";
 import Footer from "@/components/Footer";
+import EventBanner from "@/components/EventBanner";
+import FeaturedContent from "@/components/FeaturedContent";
+import BlogGrid from "@/components/BlogGrid";
+import ResourceHub from "@/components/ResourceHub";
+import Testimonials from "@/components/Testimonials";
+import Newsletter from "@/components/Newsletter";
 import { Shield, Scale, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -53,6 +59,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <EventBanner />
       <Navigation />
       
       <Hero
@@ -65,6 +72,8 @@ const Index = () => {
         secondaryCtaLink="/raise-pathways"
         backgroundImage={heroImage}
       />
+
+      <FeaturedContent />
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
 
@@ -99,6 +108,12 @@ const Index = () => {
         </div>
       </section>
 
+      <BlogGrid />
+
+      <ResourceHub />
+
+      <Testimonials />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,118,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[gradient_15s_ease_infinite]"></div>
@@ -121,6 +136,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Newsletter />
 
       <Footer />
     </div>

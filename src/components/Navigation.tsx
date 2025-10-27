@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,13 +26,9 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">R</span>
-            </div>
-            <span className="text-foreground font-semibold text-lg hidden sm:inline">
-              Responsible AI Institute
-            </span>
+          <Link to="/" className="text-foreground">
+            <Logo showText={true} className="hidden sm:flex" />
+            <Logo showText={false} className="flex sm:hidden" />
           </Link>
 
           {/* Desktop Navigation */}

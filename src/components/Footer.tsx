@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Twitter, Linkedin, Github, Mail } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   const footerLinks = {
@@ -33,13 +34,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
-              </div>
-              <span className="text-foreground font-semibold text-lg">
-                Responsible AI Institute
-              </span>
+            <Link to="/" className="text-foreground mb-4 inline-block">
+              <Logo showText={true} />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-md">
               Advancing standards-aligned AI development through membership, certification pathways, and tools for trustworthy AI systems.

@@ -6,54 +6,66 @@ import { Calendar } from "lucide-react";
 import newsImage from "@/assets/news-updates.jpg";
 
 const News = () => {
-  const newsItems = [
+  const blogPosts = [
     {
-      title: "New EU AI Act Compliance Pathway Launched",
-      date: "2025-03-15",
-      category: "Standards",
-      excerpt: "We've launched a specialized RAISE pathway to help organizations demonstrate compliance with the EU AI Act requirements.",
+      title: "FROM POLICY TO PRACTICE: Responsible AI Institute Announces Bold Strategic Shift",
+      date: "2025-02-19",
+      category: "Strategy",
+      excerpt: "The Responsible AI Institute is pivoting from policy development to practical implementation, focusing on helping organizations operationalize responsible AI through tools, training, and certification programs.",
     },
     {
-      title: "500+ Organizations Now RAISE Certified",
-      date: "2025-03-08",
-      category: "Milestone",
-      excerpt: "Celebrating a major milestone as our global community reaches 500 certified organizations across 50 countries.",
+      title: "AI Governance in Transition: Shifting from the Biden to Trump Administration",
+      date: "2025-01-20",
+      category: "Policy",
+      excerpt: "Examining the implications of the presidential transition on AI governance frameworks, regulatory approaches, and industry priorities for responsible AI development.",
     },
     {
-      title: "Bias Detection Toolkit 2.0 Released",
-      date: "2025-02-28",
+      title: "Introducing the RAISE Certification Program",
+      date: "2024-11-15",
       category: "Tools",
-      excerpt: "Major update to our bias detection toolkit includes new statistical methods and integration with popular ML frameworks.",
+      excerpt: "Announcing our new RAISE (Responsible AI Standard for Excellence) certification program, providing organizations with a clear pathway to demonstrate commitment to responsible AI practices.",
     },
     {
-      title: "Partnership with Global Standards Body Announced",
-      date: "2025-02-20",
-      category: "Partnership",
-      excerpt: "Formal collaboration with ISO to ensure RAISE certification aligns with emerging international AI governance standards.",
-    },
-    {
-      title: "Healthcare AI Governance Report Published",
-      date: "2025-02-12",
+      title: "Building Trust Through Transparency: AI Documentation Best Practices",
+      date: "2024-10-08",
       category: "Research",
-      excerpt: "New research report examines responsible AI implementation challenges and best practices in healthcare settings.",
+      excerpt: "Exploring how comprehensive documentation and model cards can build stakeholder trust and improve AI system accountability across the development lifecycle.",
     },
     {
-      title: "Annual Member Summit Registration Opens",
-      date: "2025-02-01",
+      title: "Responsible AI in Healthcare: Lessons from Early Adopters",
+      date: "2024-09-22",
+      category: "Community",
+      excerpt: "Healthcare organizations share their experiences implementing responsible AI frameworks, from algorithmic fairness testing to clinical validation processes.",
+    },
+    {
+      title: "The EU AI Act: What Organizations Need to Know",
+      date: "2024-08-14",
+      category: "Policy",
+      excerpt: "A comprehensive guide to understanding the EU AI Act's requirements, risk classifications, and compliance timelines for organizations deploying AI systems in Europe.",
+    },
+    {
+      title: "Bias Detection and Mitigation: New Tools and Techniques",
+      date: "2024-07-05",
+      category: "Tools",
+      excerpt: "Review of emerging techniques and toolkits for identifying and addressing algorithmic bias across different types of AI systems and use cases.",
+    },
+    {
+      title: "Global AI Governance Summit 2024: Key Takeaways",
+      date: "2024-06-18",
       category: "Events",
-      excerpt: "Join us for three days of workshops, case studies, and networking with responsible AI practitioners from around the world.",
+      excerpt: "Highlights from our annual summit featuring discussions on international AI standards, cross-sector collaboration, and the future of AI governance.",
     },
     {
-      title: "Q4 2024 Transparency Report Released",
-      date: "2025-01-15",
-      category: "Transparency",
-      excerpt: "Our quarterly report on certification activities, community growth, and organizational performance now available.",
+      title: "Building Responsible AI Teams: Skills and Competencies",
+      date: "2023-12-10",
+      category: "Community",
+      excerpt: "Identifying the critical skills, roles, and organizational structures needed to successfully implement and maintain responsible AI practices.",
     },
     {
-      title: "New Board Members Appointed",
-      date: "2025-01-05",
-      category: "Organization",
-      excerpt: "We welcome three distinguished experts to our Board of Directors, bringing expertise in policy, technology, and civil society.",
+      title: "Risk Management Frameworks for AI Systems",
+      date: "2023-11-03",
+      category: "Research",
+      excerpt: "Comparing different AI risk management frameworks and methodologies, including NIST, ISO, and sector-specific approaches to AI governance.",
     },
   ];
 
@@ -62,15 +74,15 @@ const News = () => {
       <Navigation />
       
       <Hero
-        title="Latest News & Updates"
-        description="Stay informed about new certifications, partnerships, research, and developments in the responsible AI ecosystem."
+        title="Blog & Insights"
+        description="Explore insights, best practices, and thought leadership on responsible AI governance, implementation, and emerging trends."
         backgroundImage={newsImage}
       />
 
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-6">
-            {newsItems.map((item, index) => (
+            {blogPosts.map((item, index) => (
               <Card
                 key={index}
                 className="bg-card border-border hover:border-primary/50 transition-all duration-300"
@@ -110,7 +122,7 @@ const News = () => {
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold text-foreground">Stay Updated</h2>
             <p className="text-lg text-muted-foreground">
-              Subscribe to our newsletter for monthly updates on standards, tools, and responsible AI best practices.
+              Subscribe to our newsletter for monthly blog updates, insights, and responsible AI best practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input

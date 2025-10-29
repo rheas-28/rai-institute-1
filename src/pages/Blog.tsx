@@ -1,11 +1,14 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calendar } from "lucide-react";
 import newsImage from "@/assets/news-updates.jpg";
 
-const News = () => {
+const Blog = () => {
+  const [activeTab, setActiveTab] = useState("all");
   const blogPosts = [
     {
       title: "FROM POLICY TO PRACTICE: Responsible AI Institute Announces Bold Strategic Shift",
@@ -81,8 +84,22 @@ const News = () => {
 
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-6">
-            {blogPosts.map((item, index) => (
+          <div className="max-w-4xl mx-auto">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+              <TabsList className="grid w-full grid-cols-7 mb-8">
+                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="strategy">Strategy</TabsTrigger>
+                <TabsTrigger value="policy">Policy</TabsTrigger>
+                <TabsTrigger value="tools">Tools</TabsTrigger>
+                <TabsTrigger value="research">Research</TabsTrigger>
+                <TabsTrigger value="community">Community</TabsTrigger>
+                <TabsTrigger value="events">Events</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value={activeTab} className="space-y-6">
+                {blogPosts
+                  .filter(item => activeTab === "all" || item.category.toLowerCase() === activeTab)
+                  .map((item, index) => (
               <Card
                 key={index}
                 className="bg-card border-border hover:border-primary/50 transition-all duration-300"
@@ -112,7 +129,9 @@ const News = () => {
                   </button>
                 </CardContent>
               </Card>
-            ))}
+                ))}
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>
@@ -143,4 +162,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Blog;

@@ -10,7 +10,7 @@ import ToolsGuides from "./pages/ToolsGuides";
 import AIPolicyTemplate from "./pages/AIPolicyTemplate";
 import AIMaturityAssessment from "./pages/AIMaturityAssessment";
 import ResponsibleAIHandbook from "./pages/ResponsibleAIHandbook";
-import News from "./pages/News";
+import Blog from "./pages/Blog";
 import Join from "./pages/Join";
 import FAQ from "./pages/FAQ";
 import Careers from "./pages/Careers";
@@ -33,7 +33,8 @@ const App = () => (
           <Route path="/ai-policy-template" element={<AIPolicyTemplate />} />
           <Route path="/ai-maturity-assessment" element={<AIMaturityAssessment />} />
           <Route path="/responsible-ai-handbook" element={<ResponsibleAIHandbook />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/news" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/join" element={<Join />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/careers" element={<Careers />} />

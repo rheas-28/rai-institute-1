@@ -402,49 +402,49 @@ const WhoWeAre = () => {
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">Leader</h3>
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/02/KPMG_NoCP_RGB-150x150.webp" alt="KPMG" className="h-20 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-29-150x150.webp" alt="IBM" className="h-20 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-27-150x150.webp" alt="PWC" className="h-20 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/04/Dow-150x150.png" alt="Dow" className="h-20 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2025/01/logo-cotiviti-2.png" alt="Cotiviti" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/02/KPMG_NoCP_RGB-150x150.webp" alt="KPMG" className="h-28 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-29-150x150.webp" alt="IBM" className="h-28 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-27-150x150.webp" alt="PWC" className="h-28 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/04/Dow-150x150.png" alt="Dow" className="h-28 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2025/01/logo-cotiviti-2.png" alt="Cotiviti" className="h-28 object-contain hover:scale-110 transition-transform" />
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">Steward</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-25-150x150.webp" alt="Accenture" className="h-16 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Kennedys-150x150.png" alt="Kennedys" className="h-16 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-25-150x150.webp" alt="Accenture" className="h-24 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Kennedys-150x150.png" alt="Kennedys" className="h-24 object-contain hover:scale-110 transition-transform" />
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">Advocate</h3>
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/AMD-150x150.webp" alt="AMD" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/ATB-Financials-150x150.webp" alt="ATB Financial" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-15-150x150.webp" alt="TELUS" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Ally-150x150.png" alt="Ally" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/02/BoozAllen_black-150x150.webp" alt="Booz Allen Hamilton" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-11-150x150.webp" alt="Deloitte" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2025/02/HCLTech-150x150.png" alt="HCLTech" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Genpact-1-150x150.png" alt="Genpact" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-28-150x150.webp" alt="EY" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Mastercard-150x150.webp" alt="Mastercard" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/03/OneTrust-150x150.png" alt="OneTrust" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-24-150x150.webp" alt="PNC" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2025/01/suncor-logo.png" alt="Suncor" className="h-14 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/03/VFS-Global-150x150.png" alt="VFS Global" className="h-14 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/AMD-150x150.webp" alt="AMD" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/ATB-Financials-150x150.webp" alt="ATB Financial" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-15-150x150.webp" alt="TELUS" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Ally-150x150.png" alt="Ally" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/02/BoozAllen_black-150x150.webp" alt="Booz Allen Hamilton" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-11-150x150.webp" alt="Deloitte" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2025/02/HCLTech-150x150.png" alt="HCLTech" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Genpact-1-150x150.png" alt="Genpact" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-28-150x150.webp" alt="EY" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Mastercard-150x150.webp" alt="Mastercard" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/03/OneTrust-150x150.png" alt="OneTrust" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-24-150x150.webp" alt="PNC" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2025/01/suncor-logo.png" alt="Suncor" className="h-20 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/03/VFS-Global-150x150.png" alt="VFS Global" className="h-20 object-contain hover:scale-110 transition-transform" />
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">Supporter</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Armilla-150x150.webp" alt="Armilla" className="h-12 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2024/06/Further-1-150x150.png" alt="Further" className="h-12 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-26-150x150.webp" alt="Fiddler AI" className="h-12 object-contain hover:scale-110 transition-transform" />
-                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Trustible-150x150.webp" alt="Trustible" className="h-12 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Armilla-150x150.webp" alt="Armilla" className="h-16 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2024/06/Further-1-150x150.png" alt="Further" className="h-16 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-26-150x150.webp" alt="Fiddler AI" className="h-16 object-contain hover:scale-110 transition-transform" />
+                    <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Trustible-150x150.webp" alt="Trustible" className="h-16 object-contain hover:scale-110 transition-transform" />
                   </div>
                 </div>
               </TabsContent>
@@ -452,17 +452,17 @@ const WhoWeAre = () => {
               {/* Ecosystem Collaborators Tab */}
               <TabsContent value="ecosystem" className="animate-fade-up">
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-62-150x150.webp" alt="Partner" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Algora-Labs-150x150.webp" alt="Algora Labs" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/CEIMIA-150x150.webp" alt="CEIMIA" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Rockefeller-Foundation-150x150.webp" alt="Rockefeller Foundation" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Eceanis-150x150.webp" alt="Eceanis" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/EY-150x150.webp" alt="EY" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Oproma-150x150.webp" alt="Oproma" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Deloitte-150x150.webp" alt="Deloitte" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/MILA-150x150.webp" alt="MILA" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Data-Grade-150x150.webp" alt="Data Grade" className="h-16 object-contain hover:scale-110 transition-transform" />
-                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Skinopathy-150x150.webp" alt="Skinopathy" className="h-16 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-62-150x150.webp" alt="Partner" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Algora-Labs-150x150.webp" alt="Algora Labs" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/CEIMIA-150x150.webp" alt="CEIMIA" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Rockefeller-Foundation-150x150.webp" alt="Rockefeller Foundation" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Eceanis-150x150.webp" alt="Eceanis" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/EY-150x150.webp" alt="EY" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Oproma-150x150.webp" alt="Oproma" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Deloitte-150x150.webp" alt="Deloitte" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/MILA-150x150.webp" alt="MILA" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Data-Grade-150x150.webp" alt="Data Grade" className="h-20 object-contain hover:scale-110 transition-transform" />
+                  <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Skinopathy-150x150.webp" alt="Skinopathy" className="h-20 object-contain hover:scale-110 transition-transform" />
                 </div>
               </TabsContent>
 

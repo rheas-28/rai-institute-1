@@ -1,9 +1,77 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Target, TrendingUp } from "lucide-react";
+import { CheckCircle2, Target, TrendingUp, ArrowRight, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
+
+const questions = [
+  {
+    id: 1,
+    question: "What best describes your organization's size?",
+    options: [
+      "Global enterprise (e.g., Fortune 500)",
+      "Large business ($1B–$5B annual revenue)",
+      "Mid-size business ($100M–$1B revenue)",
+      "Small business ($10M–$100M revenue)",
+      "Startup or very small business (under $10M)"
+    ]
+  },
+  {
+    id: 2,
+    question: "Where are you in your AI journey?",
+    options: [
+      "Just researching or planning",
+      "Testing or piloting some AI tools",
+      "Using AI in parts of the business, with some rules in place",
+      "Using AI at scale, with some structure",
+      "Using AI widely, with clear internal processes"
+    ]
+  },
+  {
+    id: 3,
+    question: "Which of these does your organization currently have in place for AI? (Select all that apply)",
+    options: [
+      "Written policies for how AI should be used",
+      "Steps to evaluate risks or impacts of AI systems",
+      "Regular tracking or checks on how AI is working",
+      "A group or committee that oversees responsible AI",
+      "Ways to test for bias or unfair outcomes",
+      "Privacy or security protections for AI systems"
+    ],
+    multiSelect: true
+  }
+];
 
 const AIMaturityAssessment = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState<Record<number, string | string[]>>({});
+  const [showResults, setShowResults] = useState(false);
+
+  const handleAnswer = (value: string) => {
+    setAnswers({ ...answers, [currentQuestion]: value });
+  };
+
+  const handleNext = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResults(true);
+    }
+  };
+
+  const handleBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  };
+
+  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  const currentQ = questions[currentQuestion];
+  const hasAnswer = answers[currentQuestion] !== undefined;
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -74,58 +142,77 @@ const AIMaturityAssessment = () => {
               </p>
             </div>
 
-            {/* Assessment Preview */}
-            <div className="space-y-6 mb-12">
-              <h3 className="text-2xl font-bold text-foreground">Sample Questions:</h3>
-              <div className="space-y-4">
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <p className="font-semibold text-foreground mb-3">Q1. What best describes your organization's size?</p>
-                  <ul className="space-y-2 text-muted-foreground ml-4">
-                    <li>• Global enterprise (e.g., Fortune 500)</li>
-                    <li>• Large business ($1B–$5B annual revenue)</li>
-                    <li>• Mid-size business ($100M–$1B revenue)</li>
-                    <li>• Small business ($10M–$100M revenue)</li>
-                    <li>• Startup or very small business (under $10M)</li>
-                  </ul>
+            {/* Assessment Questions */}
+            {!showResults ? (
+              <div className="space-y-8">
+                {/* Progress Bar */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-sm text-muted-foreground">
+                    <span>Question {currentQuestion + 1} of {questions.length}</span>
+                    <span>{Math.round(progress)}% Complete</span>
+                  </div>
+                  <Progress value={progress} className="h-2" />
                 </div>
 
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <p className="font-semibold text-foreground mb-3">Q2. Where are you in your AI journey?</p>
-                  <ul className="space-y-2 text-muted-foreground ml-4">
-                    <li>• Just researching or planning</li>
-                    <li>• Testing or piloting some AI tools</li>
-                    <li>• Using AI in parts of the business, with some rules in place</li>
-                    <li>• Using AI at scale, with some structure</li>
-                    <li>• Using AI widely, with clear internal processes</li>
-                  </ul>
+                {/* Question Card */}
+                <div className="bg-card border border-border rounded-lg p-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-6">
+                    {currentQ.question}
+                  </h3>
+                  
+                  <RadioGroup 
+                    value={answers[currentQuestion] as string} 
+                    onValueChange={handleAnswer}
+                    className="space-y-4"
+                  >
+                    {currentQ.options.map((option, index) => (
+                      <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors">
+                        <RadioGroupItem value={option} id={`option-${index}`} />
+                        <Label 
+                          htmlFor={`option-${index}`} 
+                          className="flex-1 cursor-pointer text-foreground"
+                        >
+                          {option}
+                        </Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
                 </div>
 
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <p className="font-semibold text-foreground mb-3">Q3. Which of these does your organization currently have in place for AI?</p>
-                  <p className="text-sm text-muted-foreground mb-2">Select all that apply</p>
-                  <ul className="space-y-2 text-muted-foreground ml-4">
-                    <li>• Written policies for how AI should be used</li>
-                    <li>• Steps to evaluate risks or impacts of AI systems</li>
-                    <li>• Regular tracking or checks on how AI is working</li>
-                    <li>• A group or committee that oversees responsible AI</li>
-                    <li>• Ways to test for bias or unfair outcomes</li>
-                    <li>• Privacy or security protections for AI systems</li>
-                  </ul>
+                {/* Navigation Buttons */}
+                <div className="flex items-center justify-between pt-6">
+                  <Button
+                    variant="outline"
+                    onClick={handleBack}
+                    disabled={currentQuestion === 0}
+                    className="gap-2"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back
+                  </Button>
+                  
+                  <Button
+                    onClick={handleNext}
+                    disabled={!hasAnswer}
+                    className="gap-2"
+                  >
+                    {currentQuestion === questions.length - 1 ? "See Results" : "Next"}
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
               </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="text-center py-12">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Take the 5-Minute Assessment</h3>
-              <Button size="lg" className="gap-2">
-                <Target className="w-5 h-5" />
-                Start the Assessment
-              </Button>
-              <p className="text-sm text-muted-foreground mt-4">
-                Free and confidential • Results delivered instantly
-              </p>
-            </div>
+            ) : (
+              <div className="text-center py-12">
+                <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-foreground mb-4">Assessment Complete!</h3>
+                <p className="text-muted-foreground mb-8">
+                  Thank you for completing the assessment. Your results are being processed.
+                </p>
+                <Button onClick={() => { setCurrentQuestion(0); setAnswers({}); setShowResults(false); }}>
+                  Retake Assessment
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </section>

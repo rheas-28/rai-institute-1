@@ -70,7 +70,7 @@ const ResourceHub = () => {
                 <img
                   src={resource.image}
                   alt={resource.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 brightness-75"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 brightness-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <Download className="h-8 w-8 text-primary" />

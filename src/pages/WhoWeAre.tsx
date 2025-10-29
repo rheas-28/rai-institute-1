@@ -4,6 +4,14 @@ import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { Target, Heart, Globe, Lightbulb } from "lucide-react";
 import teamImage from "@/assets/team-collaboration.jpg";
+import manojSaxena from "@/assets/team-manoj-saxena.jpg";
+import alkaPatel from "@/assets/team-alka-patel.jpg";
+import mattSanchez from "@/assets/team-matt-sanchez.png";
+import joydeepGhosh from "@/assets/team-joydeep-ghosh.jpg";
+import michaelStewart from "@/assets/team-michael-stewart.png";
+import umangBhatt from "@/assets/team-umang-bhatt.jpeg";
+import johnTang from "@/assets/team-john-tang.webp";
+import stevenKelts from "@/assets/team-steven-kelts.webp";
 
 const WhoWeAre = () => {
   const values = [
@@ -79,45 +87,92 @@ const WhoWeAre = () => {
       <section className="py-20 bg-card relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
         <div className="container mx-auto px-6 relative">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">Leadership Team</h2>
-            <p className="text-center text-muted-foreground mb-12 text-lg animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Our team brings together decades of experience in AI research, policy, industry implementation, and nonprofit leadership.
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">Meet Our Team</h2>
+            <p className="text-center text-muted-foreground mb-16 text-lg animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              Our leaders, staff, board members and advisors all share a profound care for and understanding of responsible AI. They know that responsible AI matters and that it has serious implications for businesses, governments and society.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  name: "Dr. Sarah Chen",
-                  title: "Executive Director",
-                  bio: "Former AI Policy Director at leading tech consortium, PhD in Computer Science from Stanford.",
-                },
-                {
-                  name: "Michael Rodriguez",
-                  title: "Chief Standards Officer",
-                  bio: "20+ years in standards development, previously with ISO and IEEE AI committees.",
-                },
-                {
-                  name: "Dr. Aisha Patel",
-                  title: "Director of Research",
-                  bio: "AI ethics researcher, author of influential papers on algorithmic fairness and accountability.",
-                },
-                {
-                  name: "James Thompson",
-                  title: "Director of Member Services",
-                  bio: "Nonprofit leadership experience, focused on building inclusive communities of practice.",
-                },
-              ].map((person, index) => (
-                <div 
-                  key={index} 
-                  className="p-6 rounded-lg bg-secondary/30 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-up group"
-                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
-                >
-                  <h3 className="text-xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{person.name}</h3>
-                  <p className="text-primary text-sm font-medium mb-3">{person.title}</p>
-                  <p className="text-muted-foreground text-sm">{person.bio}</p>
-                </div>
-              ))}
+            {/* Board Members */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-foreground mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>Board Members</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    name: "Manoj Saxena",
+                    title: "Chairman and Founder",
+                    image: manojSaxena,
+                  },
+                  {
+                    name: "Alka Patel",
+                    title: "VP, Government & External Affairs, COMCAST",
+                    image: alkaPatel,
+                  },
+                  {
+                    name: "Matt Sanchez",
+                    title: "Vice President, Chief Technology Officer, Digital Labor, IBM",
+                    image: mattSanchez,
+                  },
+                  {
+                    name: "Dr. Joydeep Ghosh",
+                    title: "Professor, Cockrell School of Engineering, University of Texas at Austin",
+                    image: joydeepGhosh,
+                  },
+                  {
+                    name: "Michael E. Stewart",
+                    title: "Founder, Chairman, & CEO, Lucid.AI",
+                    image: michaelStewart,
+                  },
+                ].map((person, index) => (
+                  <div 
+                    key={index} 
+                    className="p-6 rounded-lg bg-secondary/30 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-up group text-center"
+                    style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                  >
+                    <div className="mb-4 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
+                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{person.title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Expert Advisors */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-foreground mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>Expert Advisors</h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    name: "Umang Bhatt",
+                    title: "Research Associate, The Alan Turing Institute",
+                    image: umangBhatt,
+                  },
+                  {
+                    name: "John Tang",
+                    title: "Managing Director of Cerberus Technology Solutions",
+                    image: johnTang,
+                  },
+                  {
+                    name: "Steven Kelts",
+                    title: "Lecturer on Ethics of AI at Princeton University",
+                    image: stevenKelts,
+                  },
+                ].map((person, index) => (
+                  <div 
+                    key={index} 
+                    className="p-4 rounded-lg bg-secondary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-up group text-center"
+                    style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+                  >
+                    <div className="mb-3 relative w-24 h-24 mx-auto rounded-full overflow-hidden">
+                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                    </div>
+                    <h4 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">{person.title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

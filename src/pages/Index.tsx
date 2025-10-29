@@ -89,19 +89,19 @@ const Index = () => {
         <div className="container mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary/70 mb-2 hover:scale-110 transition-transform duration-300">500+</div>
               <div className="text-muted-foreground">Member Organizations</div>
             </div>
             <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">50+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary/70 mb-2 hover:scale-110 transition-transform duration-300">50+</div>
               <div className="text-muted-foreground">Countries Represented</div>
             </div>
             <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">1,200+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary/70 mb-2 hover:scale-110 transition-transform duration-300">1,200+</div>
               <div className="text-muted-foreground">Certified Systems</div>
             </div>
             <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 hover:scale-110 transition-transform duration-300">15+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary/70 mb-2 hover:scale-110 transition-transform duration-300">15+</div>
               <div className="text-muted-foreground">Standards Aligned</div>
             </div>
           </div>

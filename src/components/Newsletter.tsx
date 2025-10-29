@@ -52,7 +52,7 @@ const Newsletter = () => {
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
             <Input type="email" placeholder="Enter your email address" value={email} onChange={e => setEmail(e.target.value)} className="flex-1 bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 focus:border-white/40" />
-            <Button type="submit" size="lg" className="text-navy font-semibold bg-slate-500 hover:bg-slate-400">
+            <Button type="submit" size="lg" className="text-navy font-semibold bg-blue-500 hover:bg-blue-400">
               Subscribe
             </Button>
           </form>

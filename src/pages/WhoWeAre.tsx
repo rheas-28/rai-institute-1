@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Target, Heart, Globe, Lightbulb } from "lucide-react";
 import teamImage from "@/assets/team-collaboration.jpg";
 import manojSaxena from "@/assets/team-manoj-saxena.jpg";
@@ -93,87 +94,105 @@ const WhoWeAre = () => {
               Our leaders, staff, board members and advisors all share a profound care for and understanding of responsible AI. They know that responsible AI matters and that it has serious implications for businesses, governments and society.
             </p>
             
-            {/* Board Members */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-foreground mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>Board Members</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "Manoj Saxena",
-                    title: "Chairman and Founder",
-                    image: manojSaxena,
-                  },
-                  {
-                    name: "Alka Patel",
-                    title: "VP, Government & External Affairs, COMCAST",
-                    image: alkaPatel,
-                  },
-                  {
-                    name: "Matt Sanchez",
-                    title: "Vice President, Chief Technology Officer, Digital Labor, IBM",
-                    image: mattSanchez,
-                  },
-                  {
-                    name: "Dr. Joydeep Ghosh",
-                    title: "Professor, Cockrell School of Engineering, University of Texas at Austin",
-                    image: joydeepGhosh,
-                  },
-                  {
-                    name: "Michael E. Stewart",
-                    title: "Founder, Chairman, & CEO, Lucid.AI",
-                    image: michaelStewart,
-                  },
-                ].map((person, index) => (
-                  <div 
-                    key={index} 
-                    className="p-6 rounded-lg bg-secondary/30 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-up group text-center"
-                    style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                  >
-                    <div className="mb-4 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
-                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{person.title}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Tabs defaultValue="board" className="w-full">
+              <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
+                <TabsTrigger value="board">Board Members</TabsTrigger>
+                <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
+                <TabsTrigger value="advisors">Advisors</TabsTrigger>
+              </TabsList>
 
-            {/* Expert Advisors */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-foreground mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>Expert Advisors</h3>
-              <div className="grid md:grid-cols-4 gap-6">
-                {[
-                  {
-                    name: "Umang Bhatt",
-                    title: "Research Associate, The Alan Turing Institute",
-                    image: umangBhatt,
-                  },
-                  {
-                    name: "John Tang",
-                    title: "Managing Director of Cerberus Technology Solutions",
-                    image: johnTang,
-                  },
-                  {
-                    name: "Steven Kelts",
-                    title: "Lecturer on Ethics of AI at Princeton University",
-                    image: stevenKelts,
-                  },
-                ].map((person, index) => (
-                  <div 
-                    key={index} 
-                    className="p-4 rounded-lg bg-secondary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-up group text-center"
-                    style={{ animationDelay: `${0.5 + index * 0.1}s` }}
-                  >
-                    <div className="mb-3 relative w-24 h-24 mx-auto rounded-full overflow-hidden">
-                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+              {/* Board Members Tab */}
+              <TabsContent value="board" className="animate-fade-up">
+                <div className="grid md:grid-cols-3 gap-8">
+                  {[
+                    {
+                      name: "Manoj Saxena",
+                      title: "Chairman and Founder",
+                      image: manojSaxena,
+                    },
+                    {
+                      name: "Alka Patel",
+                      title: "VP, Government & External Affairs, COMCAST",
+                      image: alkaPatel,
+                    },
+                    {
+                      name: "Matt Sanchez",
+                      title: "Vice President, Chief Technology Officer, Digital Labor, IBM",
+                      image: mattSanchez,
+                    },
+                    {
+                      name: "Dr. Joydeep Ghosh",
+                      title: "Professor, Cockrell School of Engineering, University of Texas at Austin",
+                      image: joydeepGhosh,
+                    },
+                    {
+                      name: "Michael E. Stewart",
+                      title: "Founder, Chairman, & CEO, Lucid.AI",
+                      image: michaelStewart,
+                    },
+                  ].map((person, index) => (
+                    <div 
+                      key={index} 
+                      className="p-6 rounded-lg bg-secondary/30 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 group text-center"
+                    >
+                      <div className="mb-4 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
+                        <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{person.title}</p>
                     </div>
-                    <h4 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">{person.title}</p>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {/* Expert Advisors Tab */}
+              <TabsContent value="expert-advisors" className="animate-fade-up">
+                <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                  {[
+                    {
+                      name: "Umang Bhatt",
+                      title: "Research Associate, The Alan Turing Institute",
+                      image: umangBhatt,
+                    },
+                    {
+                      name: "John Tang",
+                      title: "Managing Director of Cerberus Technology Solutions",
+                      image: johnTang,
+                    },
+                    {
+                      name: "Steven Kelts",
+                      title: "Lecturer on Ethics of AI at Princeton University",
+                      image: stevenKelts,
+                    },
+                  ].map((person, index) => (
+                    <div 
+                      key={index} 
+                      className="p-4 rounded-lg bg-secondary/20 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 group text-center"
+                    >
+                      <div className="mb-3 relative w-24 h-24 mx-auto rounded-full overflow-hidden">
+                        <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                      </div>
+                      <h4 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed">{person.title}</p>
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {/* Advisors Tab */}
+              <TabsContent value="advisors" className="animate-fade-up">
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground text-lg mb-6">
+                    The Responsible AI Institute works with a diverse network of advisors from academia, industry, and civil society to advance trustworthy AI practices globally.
+                  </p>
+                  <div className="max-w-3xl mx-auto p-8 rounded-lg bg-secondary/20 border border-border">
+                    <p className="text-foreground">
+                      Our advisory network includes experts in AI ethics, policy, technology, and governance who contribute their insights and guidance to help shape responsible AI frameworks and standards worldwide.
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>

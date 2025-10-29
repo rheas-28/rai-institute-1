@@ -78,7 +78,7 @@ const FeaturedContent = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 brightness-50"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 brightness-75"
                   />
                   <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold uppercase flex items-center gap-1">
                     <Icon className="h-3 w-3" />

@@ -77,7 +77,7 @@ const Blog = () => {
       <Navigation />
       
       <Hero
-        title="Blog & Insights"
+        title="Blogs & Insights"
         description="Explore insights, best practices, and thought leadership on responsible AI governance, implementation, and emerging trends."
         backgroundImage={newsImage}
       />

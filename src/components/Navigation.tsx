@@ -78,32 +78,6 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/tools-guides"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Tools & Guides</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Comprehensive toolkit for practical AI implementation
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/ai-policy-template"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">AI Policy Template</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Ready-to-use policy template for AI governance
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
                             to="/ai-maturity-assessment"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -123,6 +97,19 @@ const Navigation = () => {
                             <div className="text-sm font-medium leading-none">Responsible AI Handbook</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Enterprise-ready guide to building responsible AI
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/ai-policy-template"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">AI Policy Template</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Ready-to-use policy template for AI governance
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -270,10 +257,9 @@ const Navigation = () => {
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">What We Offer</div>
               <Link to="/raise-pathways" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/raise-pathways") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAISE Pathways</Link>
-              <Link to="/tools-guides" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/tools-guides") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Tools & Guides</Link>
-              <Link to="/ai-policy-template" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-policy-template") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Policy Template</Link>
               <Link to="/ai-maturity-assessment" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-maturity-assessment") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Maturity Assessment</Link>
               <Link to="/responsible-ai-handbook" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/responsible-ai-handbook") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Responsible AI Handbook</Link>
+              <Link to="/ai-policy-template" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-policy-template") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Policy Template</Link>
             </div>
 
             <div className="pt-2">

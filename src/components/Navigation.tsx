@@ -16,31 +16,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Who We Are", path: "/who-we-are" },
-    { 
-      name: "What We Offer", 
-      subLinks: [
-        { name: "RAISE Pathways", path: "/raise-pathways" },
-        { name: "Tools & Guides", path: "/tools-guides" },
-        { name: "AI Policy Template", path: "/ai-policy-template" },
-        { name: "AI Maturity Assessment", path: "/ai-maturity-assessment" },
-        { name: "Responsible AI Handbook", path: "/responsible-ai-handbook" },
-      ]
-    },
-    { name: "News", path: "/news" },
-    { name: "Join", path: "/join" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Careers", path: "/careers" },
-  ];
-
   const isActive = (path: string) => location.pathname === path;
-  
-  const isOfferActive = () => {
-    const offerPaths = ["/raise-pathways", "/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook"];
-    return offerPaths.includes(location.pathname);
-  };
 
   return (
     <nav className="sticky top-0 z-50 bg-navy-darker/95 backdrop-blur-sm border-b border-border">
@@ -80,7 +56,7 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
-                    isOfferActive() ? "text-primary" : "text-muted-foreground"
+                    isActive("/raise-pathways") ? "text-primary" : "text-muted-foreground"
                   }`}>
                     What We Offer
                   </NavigationMenuTrigger>
@@ -99,6 +75,23 @@ const Navigation = () => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Resources Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
+                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
+                  }`}>
+                    Resources
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
@@ -219,140 +212,27 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 space-y-2 border-t border-border">
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/who-we-are"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/who-we-are")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Who We Are
-            </Link>
+            <Link to="/" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Home</Link>
+            <Link to="/who-we-are" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Who We Are</Link>
             
-            {/* What We Offer Section */}
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">What We Offer</div>
-              <Link
-                to="/raise-pathways"
-                onClick={() => setIsOpen(false)}
-                className={`block px-6 py-2 rounded-md text-sm transition-colors ${
-                  isActive("/raise-pathways")
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                RAISE Pathways
-              </Link>
-              <Link
-                to="/tools-guides"
-                onClick={() => setIsOpen(false)}
-                className={`block px-6 py-2 rounded-md text-sm transition-colors ${
-                  isActive("/tools-guides")
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                Tools & Guides
-              </Link>
-              <Link
-                to="/ai-policy-template"
-                onClick={() => setIsOpen(false)}
-                className={`block px-6 py-2 rounded-md text-sm transition-colors ${
-                  isActive("/ai-policy-template")
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                AI Policy Template
-              </Link>
-              <Link
-                to="/ai-maturity-assessment"
-                onClick={() => setIsOpen(false)}
-                className={`block px-6 py-2 rounded-md text-sm transition-colors ${
-                  isActive("/ai-maturity-assessment")
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                AI Maturity Assessment
-              </Link>
-              <Link
-                to="/responsible-ai-handbook"
-                onClick={() => setIsOpen(false)}
-                className={`block px-6 py-2 rounded-md text-sm transition-colors ${
-                  isActive("/responsible-ai-handbook")
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                Responsible AI Handbook
-              </Link>
+              <Link to="/raise-pathways" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/raise-pathways") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAISE Pathways</Link>
             </div>
 
-            <Link
-              to="/news"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/news")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              News
-            </Link>
-            <Link
-              to="/join"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/join")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Join
-            </Link>
-            <Link
-              to="/faq"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/faq")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              FAQ
-            </Link>
-            <Link
-              to="/careers"
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive("/careers")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Careers
-            </Link>
-            <div className="pt-4">
-              <Button asChild className="w-full">
-                <Link to="/join" onClick={() => setIsOpen(false)}>
-                  Become a Member
-                </Link>
-              </Button>
+            <div className="pt-2">
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Resources</div>
+              <Link to="/tools-guides" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/tools-guides") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Tools & Guides</Link>
+              <Link to="/ai-policy-template" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-policy-template") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Policy Template</Link>
+              <Link to="/ai-maturity-assessment" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-maturity-assessment") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Maturity Assessment</Link>
+              <Link to="/responsible-ai-handbook" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/responsible-ai-handbook") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Responsible AI Handbook</Link>
             </div>
+
+            <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>News</Link>
+            <Link to="/join" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/join") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Join</Link>
+            <Link to="/faq" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/faq") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>FAQ</Link>
+            <Link to="/careers" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/careers") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Careers</Link>
+            <div className="pt-4"><Button asChild className="w-full"><Link to="/join" onClick={() => setIsOpen(false)}>Become a Member</Link></Button></div>
           </div>
         )}
       </div>

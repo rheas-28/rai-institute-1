@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import WhoWeAre from "./pages/WhoWeAre";
 import RaisePathways from "./pages/RaisePathways";
 import ToolsGuides from "./pages/ToolsGuides";
+import AIPolicyTemplate from "./pages/AIPolicyTemplate";
+import AIMaturityAssessment from "./pages/AIMaturityAssessment";
+import ResponsibleAIHandbook from "./pages/ResponsibleAIHandbook";
 import News from "./pages/News";
 import Join from "./pages/Join";
 import FAQ from "./pages/FAQ";
@@ -27,6 +30,9 @@ const App = () => (
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/raise-pathways" element={<RaisePathways />} />
           <Route path="/tools-guides" element={<ToolsGuides />} />
+          <Route path="/ai-policy-template" element={<AIPolicyTemplate />} />
+          <Route path="/ai-maturity-assessment" element={<AIMaturityAssessment />} />
+          <Route path="/responsible-ai-handbook" element={<ResponsibleAIHandbook />} />
           <Route path="/news" element={<News />} />
           <Route path="/join" element={<Join />} />
           <Route path="/faq" element={<FAQ />} />

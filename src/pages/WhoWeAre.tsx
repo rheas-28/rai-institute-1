@@ -13,6 +13,36 @@ import michaelStewart from "@/assets/team-michael-stewart.png";
 import umangBhatt from "@/assets/team-umang-bhatt.jpeg";
 import johnTang from "@/assets/team-john-tang.webp";
 import stevenKelts from "@/assets/team-steven-kelts.webp";
+import aurelieJacquet from "@/assets/team-aurelie-jacquet.jpeg";
+import vilmosLorincz from "@/assets/team-vilmos-lorincz.webp";
+import deborahLeff from "@/assets/team-deborah-leff.webp";
+import sueWilliams from "@/assets/team-sue-williams.webp";
+import mohanReddy from "@/assets/team-mohan-reddy.webp";
+import alexWoodruff from "@/assets/team-alex-woodruff.webp";
+import jeffreyRoy from "@/assets/team-jeffrey-roy.webp";
+import graemeAuld from "@/assets/team-graeme-auld.webp";
+import michaelGolub from "@/assets/team-michael-golub.jpg";
+import veronicaRotemberg from "@/assets/team-veronica-rotemberg.webp";
+import arunaKolluru from "@/assets/team-aruna-kolluru.webp";
+import brandieNonnecke from "@/assets/team-brandie-nonnecke.webp";
+import juliaStoyanovich from "@/assets/team-julia-stoyanovich.webp";
+import matissaHollister from "@/assets/team-matissa-hollister.webp";
+import barbaraCosgrove from "@/assets/team-barbara-cosgrove.webp";
+import craigShank from "@/assets/team-craig-shank.webp";
+import karenSilverman from "@/assets/team-karen-silverman.webp";
+import nanditaSampath from "@/assets/team-nandita-sampath.webp";
+import brentMittelstadt from "@/assets/team-brent-mittelstadt.webp";
+import timVincent from "@/assets/team-tim-vincent.webp";
+import kasiaChmielinski from "@/assets/team-kasia-chmielinski.webp";
+import cameronDavies from "@/assets/team-cameron-davies.webp";
+import rajeevRonanki from "@/assets/team-rajeev-ronanki.webp";
+import markRolston from "@/assets/team-mark-rolston.webp";
+import cathyCobey from "@/assets/team-cathy-cobey.webp";
+import bhattVadlamani from "@/assets/team-bhatt-vadlamani.webp";
+import doreenLorenzo from "@/assets/team-doreen-lorenzo.webp";
+import surajMadnani from "@/assets/team-suraj-madnani.webp";
+import saimaShafiq from "@/assets/team-saima-shafiq.jpeg";
+import ashleyCasovan from "@/assets/team-ashley-casovan.jpeg";
 
 const WhoWeAre = () => {
   const values = [
@@ -147,7 +177,7 @@ const WhoWeAre = () => {
 
               {/* Expert Advisors Tab */}
               <TabsContent value="expert-advisors" className="animate-fade-up">
-                <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-4 gap-6">
                   {[
                     {
                       name: "Umang Bhatt",
@@ -163,6 +193,111 @@ const WhoWeAre = () => {
                       name: "Steven Kelts",
                       title: "Lecturer on Ethics of AI at Princeton University",
                       image: stevenKelts,
+                    },
+                    {
+                      name: "Aurelie Jacquet",
+                      title: "Chair of Standards Committee, International Standards on AI",
+                      image: aurelieJacquet,
+                    },
+                    {
+                      name: "Vilmos Lorincz",
+                      title: "Managing Director, Data and Digital Products, Commercial Bank, Lloyds Banking Group",
+                      image: vilmosLorincz,
+                    },
+                    {
+                      name: "Deborah Leff",
+                      title: "Board Member, Recruiter.com",
+                      image: deborahLeff,
+                    },
+                    {
+                      name: "Sue Williams",
+                      title: "Managing Director, Hexagon Consultants",
+                      image: sueWilliams,
+                    },
+                    {
+                      name: "Mohan Reddy",
+                      title: "Co-Founder & CTO, SkyHive",
+                      image: mohanReddy,
+                    },
+                    {
+                      name: "Alex Woodruff",
+                      title: "Global Accounts, Fiddler AI",
+                      image: alexWoodruff,
+                    },
+                    {
+                      name: "Jeffrey Roy",
+                      title: "Professor, Dalhousie University School of Public Administration",
+                      image: jeffreyRoy,
+                    },
+                    {
+                      name: "Graeme Auld",
+                      title: "Professor, School of Public Policy and Administration, Carleton University",
+                      image: graemeAuld,
+                    },
+                    {
+                      name: "Michael Golub",
+                      title: "Director of AI Ethics and Compliance, Merck",
+                      image: michaelGolub,
+                    },
+                    {
+                      name: "Veronica Rotemberg",
+                      title: "Dermatologist, Memorial Sloan Kettering Cancer Center",
+                      image: veronicaRotemberg,
+                    },
+                    {
+                      name: "Aruna Kolluru",
+                      title: "Chief Technologist, AI, Dell Technologies",
+                      image: arunaKolluru,
+                    },
+                    {
+                      name: "Brandie Nonnecke",
+                      title: "Founding Director, CITRIS Policy Lab, UC Berkeley",
+                      image: brandieNonnecke,
+                    },
+                    {
+                      name: "Julia Stoyanovich",
+                      title: "Associate Professor, NYU Tandon School of Engineering, New York University",
+                      image: juliaStoyanovich,
+                    },
+                    {
+                      name: "Matissa Hollister",
+                      title: "Assistant Professor of Organizational Behaviour, McGill University",
+                      image: matissaHollister,
+                    },
+                    {
+                      name: "Barbara Cosgrove",
+                      title: "VP, Chief Privacy Officer, Workday",
+                      image: barbaraCosgrove,
+                    },
+                    {
+                      name: "Craig Shank",
+                      title: "Senior Leader & Strategist: Artificial Intelligence and Emerging Tech Ethics",
+                      image: craigShank,
+                    },
+                    {
+                      name: "Karen Silverman",
+                      title: "CEO & Founder, The Cantellus Group",
+                      image: karenSilverman,
+                    },
+                    {
+                      name: "Nandita Sampath",
+                      title: "AI Policy Analyst, Consumer Reports",
+                      image: nanditaSampath,
+                    },
+                    {
+                      name: "Brent Mittelstadt",
+                      title: "Director of Research, Associate Professor, and Senior Research Fellow, Oxford Internet Institute, University of Oxford",
+                      image: brentMittelstadt,
+                    },
+                    {
+                      name: "Tim Vincent",
+                      title: "Retired IBM Fellow & CTO of Data and Analytics, IBM",
+                      image: timVincent,
+                    },
+                    {
+                      name: "Kasia Chmielinski",
+                      title: "Co-Founder, Data Nutrition Project",
+                      image: kasiaChmielinski,
                     },
                   ].map((person, index) => (
                     <div 
@@ -181,15 +316,65 @@ const WhoWeAre = () => {
 
               {/* Advisors Tab */}
               <TabsContent value="advisors" className="animate-fade-up">
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground text-lg mb-6">
-                    The Responsible AI Institute works with a diverse network of advisors from academia, industry, and civil society to advance trustworthy AI practices globally.
-                  </p>
-                  <div className="max-w-3xl mx-auto p-8 rounded-lg bg-secondary/20 border border-border">
-                    <p className="text-foreground">
-                      Our advisory network includes experts in AI ethics, policy, technology, and governance who contribute their insights and guidance to help shape responsible AI frameworks and standards worldwide.
-                    </p>
-                  </div>
+                <div className="grid md:grid-cols-3 gap-8">
+                  {[
+                    {
+                      name: "Cameron Davies",
+                      title: "Chief Data Officer, Yum! Brands",
+                      image: cameronDavies,
+                    },
+                    {
+                      name: "Rajeev Ronanki",
+                      title: "CEO, Lyric",
+                      image: rajeevRonanki,
+                    },
+                    {
+                      name: "Mark Rolston",
+                      title: "Founder & Chief Creative, argodesign",
+                      image: markRolston,
+                    },
+                    {
+                      name: "Cathy Cobey",
+                      title: "Global Trusted AI Leader, EY",
+                      image: cathyCobey,
+                    },
+                    {
+                      name: "Dr. Bhatt Vadlamani",
+                      title: "VP & Chief Technology Advisor to COO, Jackson Financial",
+                      image: bhattVadlamani,
+                    },
+                    {
+                      name: "Doreen Lorenzo",
+                      title: "Assistant Dean, School of Design and Creative Technology, University of Texas at Austin",
+                      image: doreenLorenzo,
+                    },
+                    {
+                      name: "Suraj Madnani",
+                      title: "VP & Chief Product Owner, Risk Management and Product Development, American Express",
+                      image: surajMadnani,
+                    },
+                    {
+                      name: "Saima Shafiq",
+                      title: "SVP, Head of Applied AI Transformation, PNC Bank",
+                      image: saimaShafiq,
+                    },
+                    {
+                      name: "Ashley Casovan",
+                      title: "Managing Director, AI Governance Centre, IAPP",
+                      image: ashleyCasovan,
+                    },
+                  ].map((person, index) => (
+                    <div 
+                      key={index} 
+                      className="p-6 rounded-lg bg-secondary/30 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 group text-center"
+                    >
+                      <div className="mb-4 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
+                        <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{person.name}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{person.title}</p>
+                    </div>
+                  ))}
                 </div>
               </TabsContent>
             </Tabs>

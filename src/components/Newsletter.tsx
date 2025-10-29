@@ -3,19 +3,18 @@ import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const Newsletter = () => {
   const [email, setEmail] = useState("");
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!email) {
       toast({
         title: "Email required",
         description: "Please enter your email address.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -26,20 +25,17 @@ const Newsletter = () => {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-
     toast({
       title: "Successfully subscribed!",
-      description: "Thank you for subscribing to our newsletter.",
+      description: "Thank you for subscribing to our newsletter."
     });
     setEmail("");
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-navy via-navy-light to-cobalt relative overflow-hidden">
+  return <section className="py-20 bg-gradient-to-br from-navy via-navy-light to-cobalt relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent"></div>
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mx-auto text-center animate-fadeIn">
@@ -55,18 +51,8 @@ const Newsletter = () => {
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 focus:border-white/40"
-            />
-            <Button 
-              type="submit" 
-              size="lg" 
-              className="bg-white text-navy hover:bg-white/90 font-semibold"
-            >
+            <Input type="email" placeholder="Enter your email address" value={email} onChange={e => setEmail(e.target.value)} className="flex-1 bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 focus:border-white/40" />
+            <Button type="submit" size="lg" className="text-navy font-semibold bg-slate-500 hover:bg-slate-400">
               Subscribe
             </Button>
           </form>
@@ -76,8 +62,6 @@ const Newsletter = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Newsletter;

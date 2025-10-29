@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Target, Heart, Globe, Lightbulb } from "lucide-react";
+import { Target, Heart, Globe, Lightbulb, Compass, CheckCircle, Users } from "lucide-react";
 import teamImage from "@/assets/team-collaboration.jpg";
 import manojSaxena from "@/assets/team-manoj-saxena.jpg";
 import alkaPatel from "@/assets/team-alka-patel.jpg";
@@ -82,14 +82,24 @@ const WhoWeAre = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-8 text-lg text-muted-foreground">
             <div className="animate-fade-up">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Our Mission</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <Compass className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">Our Mission</h2>
+              </div>
               <p>
                 The Responsible AI Institute exists to accelerate the development and deployment of trustworthy artificial intelligence systems. We provide organizations with the frameworks, certification pathways, and community support needed to build AI that is safe, fair, transparent, and accountable.
               </p>
             </div>
 
             <div className="animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              <h2 className="text-3xl font-bold text-foreground mb-4">What We Do</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">What We Do</h2>
+              </div>
               <p className="mb-4">
                 Through our RAISE (Responsible AI Standards & Evaluation) Pathways, we offer structured certification programs that align with global AI governance standards including ISO, NIST, EU AI Act, and emerging frameworks worldwide.
               </p>
@@ -99,7 +109,12 @@ const WhoWeAre = () => {
             </div>
 
             <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <h2 className="text-3xl font-bold text-foreground mb-4">Our Approach</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">Our Approach</h2>
+              </div>
               <p>
                 We believe responsible AI is not just about compliance—it's about building systems that earn and maintain public trust. Our approach combines rigorous technical standards with practical implementation guidance, supported by a vibrant community of AI practitioners, researchers, policymakers, and civil society representatives.
               </p>

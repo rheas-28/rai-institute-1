@@ -13,12 +13,18 @@ import { Shield, Scale, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ai-governance-network.jpg";
-import logo1 from "@/assets/logo-placeholder-1.png";
-import logo2 from "@/assets/logo-placeholder-2.png";
-import logo3 from "@/assets/logo-placeholder-3.png";
-import logo4 from "@/assets/logo-placeholder-4.png";
-import logo5 from "@/assets/logo-placeholder-5.png";
-import logo6 from "@/assets/logo-placeholder-6.png";
+import logoKPMG from "@/assets/logo-kpmg.webp";
+import logoMastercard from "@/assets/logo-mastercard.webp";
+import logoAMD from "@/assets/logo-amd.webp";
+import logoDow from "@/assets/logo-dow.png";
+import logoGenpact from "@/assets/logo-genpact.png";
+import logoHCLTech from "@/assets/logo-hcltech.png";
+import logoOneTrust from "@/assets/logo-onetrust.png";
+import logoAlly from "@/assets/logo-ally.png";
+import logoATB from "@/assets/logo-atb.webp";
+import logoSuncor from "@/assets/logo-suncor.png";
+import logoVFS from "@/assets/logo-vfs.png";
+import logoArmilla from "@/assets/logo-armilla.webp";
 
 const Index = () => {
   const features = [
@@ -49,12 +55,18 @@ const Index = () => {
   ];
 
   const logos = [
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo5,
-    logo6,
+    logoKPMG,
+    logoMastercard,
+    logoAMD,
+    logoDow,
+    logoGenpact,
+    logoHCLTech,
+    logoOneTrust,
+    logoAlly,
+    logoATB,
+    logoSuncor,
+    logoVFS,
+    logoArmilla,
   ];
 
   return (

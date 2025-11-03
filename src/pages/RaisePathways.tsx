@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import { CheckCircle, FileCheck, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -63,7 +64,7 @@ const RaisePathways = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-              How RAISE Certification Works
+              How It Works
             </h2>
             
             <div className="space-y-8 mt-12">
@@ -72,9 +73,9 @@ const RaisePathways = () => {
                   <span className="text-primary font-bold text-xl">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Assessment</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Evaluate Your Organization</h3>
                   <p className="text-muted-foreground">
-                    Complete a comprehensive self-assessment using our standards-aligned evaluation framework. Identify gaps and prioritize improvements.
+                    Evaluate your organization's AI governance implementation maturity using RAI Institute's self-guided platform with controls mapped to global frameworks (NIST AI RMF, ISO/IEC 42001, OWASP, etc.).
                   </p>
                 </div>
               </div>
@@ -84,9 +85,9 @@ const RaisePathways = () => {
                   <span className="text-primary font-bold text-xl">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Implementation</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Follow the RAISE Framework</h3>
                   <p className="text-muted-foreground">
-                    Access our toolkit of resources, templates, and guides to address identified gaps. Get support from our community and expert advisors.
+                    Progress through structured verification across various badge types (Foundation, Trust, Sustainability, Cost Efficiency) tailored to your AI system type (ML/AI, GenAI, or Agentic AI).
                   </p>
                 </div>
               </div>
@@ -96,9 +97,9 @@ const RaisePathways = () => {
                   <span className="text-primary font-bold text-xl">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Verification</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Earn Verified Credentials</h3>
                   <p className="text-muted-foreground">
-                    Submit evidence and documentation for independent review. Our assessors evaluate your AI systems against certification criteria.
+                    Achieve badges at 70% implementation threshold, demonstrating commitment to responsible AI practices across governance, security, sustainability and cost domains.
                   </p>
                 </div>
               </div>
@@ -108,9 +109,21 @@ const RaisePathways = () => {
                   <span className="text-primary font-bold text-xl">4</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Certification</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Showcase on Registry</h3>
                   <p className="text-muted-foreground">
-                    Receive official RAISE certification, badges, and certificates. Maintain certification through annual reviews and continuous improvement.
+                    Display your verified achievements on the Responsible AI Registry, building stakeholder trust and demonstrating regulatory readiness.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Join RAI's 36,000+ Community</h3>
+                  <p className="text-muted-foreground">
+                    Connect with industry leaders, access 1,100+ AI controls spanning 17 standards, and participate in the vendor-agnostic ecosystem driving responsible AI governance since 2016.
                   </p>
                 </div>
               </div>
@@ -133,6 +146,39 @@ const RaisePathways = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="form" className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Your AI Governance Journey Starts Here
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Whether piloting an LLM or managing enterprise-scale AI, RAISE Pathways helps organizations take the next right step—with credibility, structure, and support.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Fill out the form and we'll help:
+              </p>
+              <ul className="text-left text-muted-foreground mt-4 space-y-2 max-w-2xl mx-auto">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Identify the right starting point for your organization in RAISE Pathways</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Learn how our tools and badges align with your business goals</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Explore what membership unlocks at your stage of maturity</span>
+                </li>
+              </ul>
+            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

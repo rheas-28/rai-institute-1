@@ -4,6 +4,9 @@ interface LogoWallProps {
 }
 
 const LogoWall = ({ title, logos }: LogoWallProps) => {
+  // Duplicate logos for infinite scroll effect
+  const duplicatedLogos = [...logos, ...logos];
+  
   return (
     <section className="py-16 bg-secondary/30">
       <div className="container mx-auto px-6">
@@ -13,18 +16,17 @@ const LogoWall = ({ title, logos }: LogoWallProps) => {
           </h3>
         )}
         
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
-            {logos.map((logo, index) => (
+        <div className="bg-white rounded-2xl p-6 shadow-sm overflow-hidden">
+          <div className="flex gap-12 animate-scroll">
+            {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center h-20 w-full opacity-80 hover:opacity-100 transition-all duration-500 grayscale-[30%] hover:grayscale-0 hover:scale-110 animate-fade-up p-2"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="flex items-center justify-center flex-shrink-0 w-32 h-20 opacity-80 hover:opacity-100 transition-all duration-500 grayscale-[30%] hover:grayscale-0 hover:scale-110"
               >
                 <img
                   src={logo}
                   alt={`Partner logo ${index + 1}`}
-                  className="max-h-20 w-auto object-contain transition-all duration-500"
+                  className="max-h-20 max-w-full w-auto object-contain transition-all duration-500"
                 />
               </div>
             ))}

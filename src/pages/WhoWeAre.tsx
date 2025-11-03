@@ -413,101 +413,82 @@ const WhoWeAre = () => {
               </TabsList>
 
               {/* Members Tab */}
-              <TabsContent value="members" className="animate-fade-up space-y-12">
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Leader</h3>
+              <TabsContent value="members" className="animate-fade-up">
+                <div className="bg-white rounded-2xl p-8 shadow-sm">
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/02/KPMG_NoCP_RGB-150x150.webp" alt="KPMG" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-29-150x150.webp" alt="IBM" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-27-150x150.webp" alt="PWC" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/04/Dow-150x150.png" alt="Dow" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2025/01/logo-cotiviti-2.png" alt="Cotiviti" className="max-h-full max-w-full object-contain" />
                     </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Steward</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-25-150x150.webp" alt="Accenture" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Kennedys-150x150.png" alt="Kennedys" className="max-h-full max-w-full object-contain" />
                     </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Advocate</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/AMD-150x150.webp" alt="AMD" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/ATB-Financials-150x150.webp" alt="ATB Financial" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-15-150x150.webp" alt="TELUS" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Ally-150x150.png" alt="Ally" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/02/BoozAllen_black-150x150.webp" alt="Booz Allen Hamilton" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Artboard-11-150x150.webp" alt="Deloitte" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2025/02/HCLTech-150x150.png" alt="HCLTech" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/09/Genpact-1-150x150.png" alt="Genpact" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-28-150x150.webp" alt="EY" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Mastercard-150x150.webp" alt="Mastercard" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/03/OneTrust-150x150.png" alt="OneTrust" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-24-150x150.webp" alt="PNC" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2025/01/suncor-logo.png" alt="Suncor" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/03/VFS-Global-150x150.png" alt="VFS Global" className="max-h-full max-w-full object-contain" />
                     </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Supporter</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Armilla-150x150.webp" alt="Armilla" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2024/06/Further-1-150x150.png" alt="Further" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/RAII-logos-for-website-26-150x150.webp" alt="Fiddler AI" className="max-h-full max-w-full object-contain" />
                     </div>
-                    <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all">
+                    <div className="p-4 w-32 h-32 flex items-center justify-center hover:shadow-lg transition-all opacity-95 hover:opacity-100 grayscale-0 hover:scale-110 duration-300">
                       <img src="https://www.responsible.ai/wp-content/uploads/2023/12/Trustible-150x150.webp" alt="Trustible" className="max-h-full max-w-full object-contain" />
                     </div>
                   </div>

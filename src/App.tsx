@@ -15,6 +15,8 @@ import Join from "./pages/Join";
 import FAQ from "./pages/FAQ";
 import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
+import Community from "./pages/Community";
+import Enterprise from "./pages/Enterprise";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/raise-pathways" element={<RaisePathways />} />
           <Route path="/tools-guides" element={<ToolsGuides />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/ai-policy-template" element={<AIPolicyTemplate />} />
           <Route path="/ai-maturity-assessment" element={<AIMaturityAssessment />} />
           <Route path="/responsible-ai-handbook" element={<ResponsibleAIHandbook />} />

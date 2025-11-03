@@ -91,12 +91,25 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/join"
+                            to="/community"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Community & Support for Enterprise Leaders</div>
+                            <div className="text-sm font-medium leading-none">Community</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Connect with peers and access exclusive resources for AI governance
+                              Connect with enterprise AI leaders and peers
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/enterprise"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Support for Enterprise Leaders</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Resources and partnerships for enterprise AI governance
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -245,7 +258,8 @@ const Navigation = () => {
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">What We Offer</div>
               <Link to="/raise-pathways" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/raise-pathways") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Responsible AI Verification</Link>
               <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Thought Leadership</Link>
-              <Link to="/join" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/join") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Community & Support for Enterprise Leaders</Link>
+              <Link to="/community" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/community") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Community</Link>
+              <Link to="/enterprise" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/enterprise") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Support for Enterprise Leaders</Link>
             </div>
 
             <div className="pt-2">

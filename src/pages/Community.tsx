@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import LogoWall from "@/components/LogoWall";
 import { Button } from "@/components/ui/button";
-import { Users, MessageSquare, FolderOpen } from "lucide-react";
+import { Users, MessageSquare, FolderOpen, CheckCircle } from "lucide-react";
 import communityImage from "@/assets/community-network.jpg";
 import heroImage from "@/assets/hero-ai-governance-network.jpg";
 
@@ -143,7 +143,8 @@ const Community = () => {
 
             <div className="max-w-3xl mx-auto space-y-6 mb-16">
               {whyJoinReasons.map((reason, index) => (
-                <div key={index} className="bg-card rounded-lg p-6 shadow-sm border">
+                <div key={index} className="bg-card rounded-lg p-6 shadow-sm border flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <p className="text-lg">{reason}</p>
                 </div>
               ))}

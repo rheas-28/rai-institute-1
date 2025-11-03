@@ -217,6 +217,22 @@ const Blog = () => {
                 For years, the RAI Institute has partnered with members to share their expertise through our video series on YouTube, featuring leaders from organizations like Shell, Paramount, TD Bank, and more.
               </p>
             </div>
+
+            {/* Featured Video */}
+            <div className="mb-12 max-w-4xl mx-auto">
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/EydBSUuGRMU"
+                  title="Empowering Communities in AI Development with Vilas Dhar | Responsible AI Report | EP 15"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
             
             <div className="bg-secondary/20 rounded-lg p-8 mb-8">
               <p className="text-muted-foreground text-center mb-6">

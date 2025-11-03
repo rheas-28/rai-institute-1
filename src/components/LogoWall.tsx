@@ -17,7 +17,7 @@ const LogoWall = ({ title, logos }: LogoWallProps) => {
         )}
         
         <div className="bg-white rounded-2xl p-6 shadow-sm overflow-hidden">
-          <div className="flex gap-12 animate-scroll">
+          <div className="flex gap-8 animate-scroll">
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}

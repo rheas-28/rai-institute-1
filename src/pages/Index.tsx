@@ -143,12 +143,12 @@ const Index = () => {
                 icon={<Shield className="w-12 h-12" />}
               />
               <FlipCard 
-                title="WATCHTOWER Agent"
+                title="WATCHTOWER AGENT"
                 description="Aggregates, curates, and categorizes global news and updates related to Responsible AI, Sustainable AI, and AI Regulation, providing members with a trusted stream of high quality insights that inform readiness and verification."
                 icon={<Radar className="w-12 h-12" />}
               />
               <FlipCard 
-                title="LINK Agent"
+                title="LINK AGENT"
                 description="Connects members through the Responsible AI Hub ecosystem, driving collaboration, shared learning, and benchmarking across industries."
                 icon={<Network className="w-12 h-12" />}
               />

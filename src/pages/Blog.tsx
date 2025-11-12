@@ -7,6 +7,8 @@ import { Users, Lightbulb, FileText, Video, Presentation, Globe, MessageSquare, 
 import { Link } from "react-router-dom";
 import newsImage from "@/assets/news-updates.jpg";
 import Newsletter from "@/components/Newsletter";
+import FlipCard from "@/components/FlipCard";
+import { Activity, Shield, Radar, Network } from "lucide-react";
 
 const Blog = () => {
   const featuredInsights = [
@@ -150,6 +152,42 @@ const Blog = () => {
                   </a>
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agents Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Our AI Agents</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Powered by advanced AI technology, our suite of agents helps organizations achieve and maintain responsible AI practices.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <FlipCard 
+                title="MIRA"
+                description="Diagnoses an organization's baseline maturity and readiness for Responsible AI practices."
+                icon={<Activity className="w-12 h-12" />}
+              />
+              <FlipCard 
+                title="VERA"
+                description="Independently verifies and validates Responsible AI compliance and integrity."
+                icon={<Shield className="w-12 h-12" />}
+              />
+              <FlipCard 
+                title="WATCHTOWER Agent"
+                description="Aggregates, curates, and categorizes global news and updates related to Responsible AI, Sustainable AI, and AI Regulation, providing members with a trusted stream of high quality insights that inform readiness and verification."
+                icon={<Radar className="w-12 h-12" />}
+              />
+              <FlipCard 
+                title="LINK Agent"
+                description="Connects members through the Responsible AI Hub ecosystem, driving collaboration, shared learning, and benchmarking across industries."
+                icon={<Network className="w-12 h-12" />}
+              />
             </div>
           </div>
         </div>

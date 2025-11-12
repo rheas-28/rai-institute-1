@@ -17,8 +17,8 @@ const FlipCard = ({ title, description, icon }: FlipCardProps) => {
         </div>
         
         {/* Back */}
-        <div className="flip-card-back absolute w-full h-full bg-primary text-primary-foreground border rounded-lg shadow-sm flex items-center justify-center p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="text-center">{description}</p>
+        <div className="flip-card-back absolute w-full h-full bg-secondary text-secondary-foreground border rounded-lg shadow-sm flex items-center justify-start p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <p className="text-sm text-left">{description}</p>
         </div>
       </div>
     </div>

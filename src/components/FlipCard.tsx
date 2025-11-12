@@ -18,10 +18,10 @@ const FlipCard = ({ title, description, icon }: FlipCardProps) => {
         </div>
         
         {/* Back */}
-        <div className="flip-card-back absolute w-full h-full bg-secondary text-secondary-foreground border rounded-lg shadow-sm flex flex-col items-start justify-between p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="text-sm text-left">{description}</p>
-          <Button variant="outline" size="sm" className="mt-4 self-start">
-            View More
+        <div className="flip-card-back absolute w-full h-full bg-secondary text-secondary-foreground border rounded-lg shadow-sm flex flex-col items-start justify-center p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <p className="text-sm text-left mb-4">{description}</p>
+          <Button variant="outline" size="sm" className="self-start">
+            Know More
           </Button>
         </div>
       </div>

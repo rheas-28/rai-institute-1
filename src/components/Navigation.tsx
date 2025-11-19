@@ -303,13 +303,6 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button asChild>
-              <Link to="/join">Become a Member</Link>
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}

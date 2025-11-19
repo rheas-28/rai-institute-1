@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import HeroCarousel from "@/components/HeroCarousel";
 import CardGrid from "@/components/CardGrid";
 import LogoWall from "@/components/LogoWall";
 import Footer from "@/components/Footer";
@@ -49,7 +50,7 @@ const Index = () => {
       <EventBanner />
       <Navigation />
       
-      <Hero subtitle="Nonprofit Organization" title="Building Trust in AI Through Standards & Certification" description="The Responsible AI Institute advances trustworthy AI development through membership programs, certification pathways, and comprehensive resources aligned with global standards." ctaText="Become a Member" ctaLink="/join" secondaryCtaText="Explore RAISE Pathways" secondaryCtaLink="/raise-pathways" backgroundImage={heroImage} />
+      <HeroCarousel />
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
 

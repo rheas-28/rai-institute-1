@@ -125,21 +125,21 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
-                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook", "/news"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
+                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook", "/news", "/rai-controls-library", "/verification-badges", "/raise-agents", "/raise-pathways-assets", "/case-studies", "/ai-code-of-conduct", "/events-archive"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
                   }`}>
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
+                    <ul className="grid w-[400px] gap-3 p-4 max-h-[500px] overflow-y-auto">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/tools-guides"
+                            to="/rai-controls-library"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Tools & Guides</div>
+                            <div className="text-sm font-medium leading-none">RAI Controls Library</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Comprehensive toolkit for practical AI implementation
+                              Comprehensive library of responsible AI controls and frameworks
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -147,12 +147,12 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/ai-policy-template"
+                            to="/verification-badges"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">AI Policy Template</div>
+                            <div className="text-sm font-medium leading-none">Responsible AI Verification Badges</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Ready-to-use policy template for AI governance
+                              Industry-recognized verification and certification badges
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -160,12 +160,12 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/ai-maturity-assessment"
+                            to="/raise-agents"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">AI Maturity Assessment</div>
+                            <div className="text-sm font-medium leading-none">RAISE Agents</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              5-minute assessment to benchmark your AI readiness
+                              AI agents for responsible AI implementation and monitoring
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -173,12 +173,38 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/responsible-ai-handbook"
+                            to="/raise-pathways-assets"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Responsible AI Handbook</div>
+                            <div className="text-sm font-medium leading-none">RAISE Pathways Assets</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Enterprise-ready guide to building responsible AI
+                              Resources and assets for RAISE certification pathways
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/case-studies"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Member Case Studies</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Real-world success stories from our member organizations
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/ai-code-of-conduct"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Unified AI Code of Conduct</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Industry-standard code of conduct for AI development
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -189,9 +215,22 @@ const Navigation = () => {
                             to="/news"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Blogs</div>
+                            <div className="text-sm font-medium leading-none">Research, Reports & Blogs</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Latest insights and thought leadership on responsible AI
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/events-archive"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Events & Webinars Archive</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Access past events, webinars, and recorded sessions
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -257,11 +296,14 @@ const Navigation = () => {
 
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Resources</div>
-              <Link to="/tools-guides" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/tools-guides") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Tools & Guides</Link>
-              <Link to="/ai-policy-template" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-policy-template") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Policy Template</Link>
-              <Link to="/ai-maturity-assessment" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-maturity-assessment") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Maturity Assessment</Link>
-              <Link to="/responsible-ai-handbook" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/responsible-ai-handbook") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Responsible AI Handbook</Link>
-              <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Blogs</Link>
+              <Link to="/rai-controls-library" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/rai-controls-library") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Controls Library</Link>
+              <Link to="/verification-badges" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/verification-badges") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Verification Badges</Link>
+              <Link to="/raise-agents" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/raise-agents") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAISE Agents</Link>
+              <Link to="/raise-pathways-assets" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/raise-pathways-assets") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAISE Pathways Assets</Link>
+              <Link to="/case-studies" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/case-studies") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Member Case Studies</Link>
+              <Link to="/ai-code-of-conduct" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-code-of-conduct") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Code of Conduct</Link>
+              <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Research, Reports & Blogs</Link>
+              <Link to="/events-archive" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/events-archive") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Events & Webinars Archive</Link>
             </div>
 
             <Link to="/faq" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/faq") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>FAQ</Link>

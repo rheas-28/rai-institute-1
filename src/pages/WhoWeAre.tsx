@@ -141,7 +141,7 @@ const WhoWeAre = () => {
             
             <Tabs defaultValue="board" className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-                <TabsTrigger value="board">Board Members</TabsTrigger>
+                <TabsTrigger value="board">RAI Board</TabsTrigger>
                 <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
                 <TabsTrigger value="advisors">Advisors</TabsTrigger>
               </TabsList>

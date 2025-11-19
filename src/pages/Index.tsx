@@ -72,35 +72,6 @@ const Index = () => {
       
       <HeroCarousel />
 
-      {/* Membership Value Proposition Section */}
-      <section className="py-20 bg-muted/30 border-y border-border/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Why Join the Responsible AI Institute
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {membershipReasons.map((reason, index) => {
-                const Icon = reason.icon;
-                return (
-                  <div
-                    key={reason.title}
-                    className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">{reason.title}</h3>
-                    <p className="text-muted-foreground">{reason.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
 
       <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />

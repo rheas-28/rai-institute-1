@@ -137,6 +137,19 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
+                            to="/enterprise"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Support for Enterprise Leaders</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Resources and partnerships for enterprise AI governance
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
                             to="/raise-pathways"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -160,50 +173,12 @@ const Navigation = () => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/community"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Community</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Connect with enterprise AI leaders and peers
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/enterprise"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Support for Enterprise Leaders</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Resources and partnerships for enterprise AI governance
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            
-            {/* Our Agents Link */}
-            <Link
-              to="/raise-agents"
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/raise-agents")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Our Agents
-            </Link>
-            
+
             {/* Resources Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
@@ -214,16 +189,16 @@ const Navigation = () => {
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 max-h-[500px] overflow-y-auto">
+                    <ul className="grid w-[400px] gap-3 p-4">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/rai-controls-library"
+                            to="/tools-guides"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">RAI Controls Library</div>
+                            <div className="text-sm font-medium leading-none">Tools & Frameworks</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Comprehensive library of responsible AI controls and frameworks
+                              RAI Controls Library, RAISE Pathways Assets, and implementation tools
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -234,9 +209,9 @@ const Navigation = () => {
                             to="/verification-badges"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Responsible AI Verification Badges</div>
+                            <div className="text-sm font-medium leading-none">Certification & Badges</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Industry-recognized verification and certification badges
+                              Verification badges and certification programs
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -247,22 +222,9 @@ const Navigation = () => {
                             to="/raise-agents"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">RAISE Agents</div>
+                            <div className="text-sm font-medium leading-none">AI Agents</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              AI agents for responsible AI implementation and monitoring
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/raise-pathways-assets"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">RAISE Pathways Assets</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Resources and assets for RAISE certification pathways
+                              MIRA, VERA, and other AI-powered RAI tools
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -273,35 +235,9 @@ const Navigation = () => {
                             to="/case-studies"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Member Case Studies</div>
+                            <div className="text-sm font-medium leading-none">Case Studies & Success Stories</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Real-world success stories from our member organizations
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/ai-code-of-conduct"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Unified AI Code of Conduct</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Industry-standard code of conduct for AI development
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/news"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Research, Reports & Blogs</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Latest insights and thought leadership on responsible AI
+                              Real-world RAI implementations from our member community
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -312,9 +248,9 @@ const Navigation = () => {
                             to="/blog"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Blogs</div>
+                            <div className="text-sm font-medium leading-none">Insights Hub</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Read our latest blog posts and articles
+                              Research, reports, blogs, and thought leadership
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -325,9 +261,9 @@ const Navigation = () => {
                             to="/events-archive"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Events & Webinars Archive</div>
+                            <div className="text-sm font-medium leading-none">Events & Webinars</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Access past events, webinars, and recorded sessions
+                              Live events and on-demand webinar recordings
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -339,31 +275,18 @@ const Navigation = () => {
             </NavigationMenu>
 
             <Link
-              to="/faq"
+              to="/community"
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/faq")
+                isActive("/community")
                   ? "text-primary bg-secondary"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
               }`}
             >
-              FAQ
+              Community
             </Link>
-            <Link
-              to="/careers"
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/careers")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Careers
-            </Link>
-          </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button asChild>
-              <Link to="/join">Become a Member</Link>
+            <Button asChild className="bg-cta-primary hover:bg-cta-hover text-cta-primary-foreground font-semibold shadow-cta" size="sm">
+              <Link to="/join" data-cta-location="nav-primary">Membership</Link>
             </Button>
           </div>
 
@@ -398,8 +321,6 @@ const Navigation = () => {
               <Link to="/community" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/community") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Community</Link>
               <Link to="/enterprise" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/enterprise") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Support for Enterprise Leaders</Link>
             </div>
-
-            <Link to="/raise-agents" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/raise-agents") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Our Agents</Link>
 
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Resources</div>

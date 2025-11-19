@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import HeroCarousel from "@/components/HeroCarousel";
 import CardGrid from "@/components/CardGrid";
 import LogoWall from "@/components/LogoWall";
 import Footer from "@/components/Footer";
@@ -9,7 +10,8 @@ import BlogGrid from "@/components/BlogGrid";
 import ResourceHub from "@/components/ResourceHub";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
-import { Shield, Scale, Globe, Rocket, Activity, Radar, Network } from "lucide-react";
+import FloatingCTA from "@/components/FloatingCTA";
+import { Shield, Scale, Globe, Rocket, Activity, Radar, Network, Users, Award, Lightbulb } from "lucide-react";
 import FlipCard from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -45,21 +47,67 @@ const Index = () => {
     icon: Rocket
   }];
   const logos = [logoKPMG, logoMastercard, logoAMD, logoDow, logoGenpact, logoHCLTech, logoOneTrust, logoAlly, logoATB, logoSuncor, logoVFS, logoArmilla];
+  const membershipReasons = [
+    {
+      title: "Expert Community",
+      description: "Connect with 500+ organizations and thought leaders advancing responsible AI practices globally.",
+      icon: Users,
+    },
+    {
+      title: "Industry Recognition",
+      description: "Earn certifications and badges that demonstrate your commitment to trustworthy AI development.",
+      icon: Award,
+    },
+    {
+      title: "Practical Tools",
+      description: "Access frameworks, templates, and AI agents that accelerate your responsible AI journey.",
+      icon: Lightbulb,
+    },
+  ];
+
   return <div className="min-h-screen bg-background">
       <EventBanner />
       <Navigation />
+      <FloatingCTA />
       
-      <Hero subtitle="Nonprofit Organization" title="Building Trust in AI Through Standards & Certification" description="The Responsible AI Institute advances trustworthy AI development through membership programs, certification pathways, and comprehensive resources aligned with global standards." ctaText="Become a Member" ctaLink="/join" secondaryCtaText="Explore RAISE Pathways" secondaryCtaLink="/raise-pathways" backgroundImage={heroImage} />
+      <HeroCarousel />
+
+      {/* Membership Value Proposition */}
+      <section className="py-16 bg-muted/20 border-t border-border/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Why Join the Responsible AI Institute
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {membershipReasons.map((reason, index) => {
+                const Icon = reason.icon;
+                return (
+                  <div
+                    key={reason.title}
+                    className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3">{reason.title}</h3>
+                    <p className="text-muted-foreground">{reason.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
-
-      <FeaturedContent />
 
       <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-primary/5 relative overflow-hidden border-t border-primary/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
         <div className="container mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-up" style={{
@@ -91,8 +139,9 @@ const Index = () => {
       </section>
 
       {/* AI Agents Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-background/95 relative overflow-hidden border-t border-border/20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our AI Agents</h2>
@@ -117,7 +166,7 @@ const Index = () => {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden border-t border-border/20">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,118,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[gradient_15s_ease_infinite]"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-up">
@@ -125,14 +174,19 @@ const Index = () => {
               Ready to Build Trustworthy AI?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Join our community of organizations committed to responsible AI development.
+              Join our community of organizations committed to responsible AI development and get started today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg" variant="glow">
-                <Link to="/join">Become a Member</Link>
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-cta-primary hover:bg-cta-hover text-cta-primary-foreground font-semibold shadow-cta"
+                data-cta-location="bottom-primary"
+              >
+                <Link to="/join">Explore Membership Options</Link>
               </Button>
-              <Button asChild variant="secondary" size="lg" className="text-primary">
-                <Link to="/raise-pathways">Learn About RAISE</Link>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/join" data-cta-location="bottom-secondary">Schedule a Consultation</Link>
               </Button>
             </div>
           </div>

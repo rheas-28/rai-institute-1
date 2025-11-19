@@ -4,20 +4,28 @@ import Logo from "@/components/Logo";
 
 const Footer = () => {
   const footerLinks = {
-    organization: [
+    company: [
       { name: "Who We Are", path: "/who-we-are" },
       { name: "Careers", path: "/careers" },
-      { name: "News", path: "/news" },
-      { name: "FAQ", path: "/faq" },
+      { name: "Contact", path: "/join" },
+      { name: "Press", path: "/blog" },
     ],
-    programs: [
-      { name: "RAISE Pathways", path: "/raise-pathways" },
-      { name: "Tools & Guides", path: "/tools-guides" },
-      { name: "Join", path: "/join" },
+    resources: [
+      { name: "Tools & Frameworks", path: "/tools-guides" },
+      { name: "AI Code of Conduct", path: "/ai-code-of-conduct" },
+      { name: "FAQ", path: "/faq" },
+      { name: "Documentation", path: "/tools-guides" },
+    ],
+    community: [
+      { name: "Events", path: "/events-archive" },
+      { name: "Blog", path: "/blog" },
+      { name: "Case Studies", path: "/case-studies" },
+      { name: "Membership", path: "/join" },
     ],
     legal: [
       { name: "Privacy Policy", path: "/privacy" },
       { name: "Terms of Service", path: "/terms" },
+      { name: "Accessibility", path: "/privacy" },
     ],
   };
 
@@ -31,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-navy-darker border-t border-border">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="text-foreground mb-4 inline-block">
@@ -48,11 +56,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Organization */}
+          {/* Company */}
           <div className="border-l border-border/50 pl-6">
-            <h3 className="text-foreground font-semibold mb-4">Organization</h3>
+            <h3 className="text-foreground font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {footerLinks.organization.map((link) => (
+              {footerLinks.company.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
@@ -65,11 +73,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Resources */}
           <div className="border-l border-border/50 pl-6">
-            <h3 className="text-foreground font-semibold mb-4">Programs</h3>
+            <h3 className="text-foreground font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
-              {footerLinks.programs.map((link) => (
+              {footerLinks.resources.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Community */}
+          <div className="border-l border-border/50 pl-6">
+            <h3 className="text-foreground font-semibold mb-4">Community</h3>
+            <ul className="space-y-3">
+              {footerLinks.community.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}

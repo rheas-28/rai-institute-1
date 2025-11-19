@@ -4,6 +4,8 @@ import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Target, Heart, Globe, Lightbulb, Compass, CheckCircle, Users } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import teamImage from "@/assets/team-collaboration.jpg";
 import manojSaxena from "@/assets/team-manoj-saxena.jpg";
 import alkaPatel from "@/assets/team-alka-patel.jpg";
@@ -45,6 +47,29 @@ import saimaShafiq from "@/assets/team-saima-shafiq.jpeg";
 import ashleyCasovan from "@/assets/team-ashley-casovan.jpeg";
 
 const WhoWeAre = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("board");
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash === 'rai-board') {
+      setActiveTab('board');
+      setTimeout(() => document.getElementById('rai-board')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-fellows') {
+      setActiveTab('expert-advisors');
+      setTimeout(() => document.getElementById('rai-fellows')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-advisors') {
+      setActiveTab('advisors');
+      setTimeout(() => document.getElementById('rai-advisors')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'team') {
+      setTimeout(() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'about-us') {
+      setTimeout(() => document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-community') {
+      setTimeout(() => document.getElementById('rai-community')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  }, [location]);
+
   const values = [
     {
       title: "Standards-Driven",
@@ -139,11 +164,11 @@ const WhoWeAre = () => {
               Our leaders, staff, board members and advisors all share a profound care for and understanding of responsible AI. They know that responsible AI matters and that it has serious implications for businesses, governments and society.
             </p>
             
-            <Tabs defaultValue="board" className="w-full">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-                <TabsTrigger value="board">Board Members</TabsTrigger>
-                <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
-                <TabsTrigger value="advisors">Advisors</TabsTrigger>
+                <TabsTrigger value="board">RAI Board</TabsTrigger>
+                <TabsTrigger value="expert-advisors">RAI Fellows</TabsTrigger>
+                <TabsTrigger value="advisors">RAI Advisors</TabsTrigger>
               </TabsList>
 
               {/* Board Members Tab */}
@@ -400,7 +425,7 @@ const WhoWeAre = () => {
       <section id="rai-community" className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">RAI Institute Community</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">RAI Community</h2>
             <p className="text-center text-muted-foreground mb-16 text-lg max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s' }}>
               The responsible AI ecosystem is made up of all types of organizations, from private sector companies, regulators, standards organizations, academic institutions, civil society, individual experts, and many more. Over the years RAII has embedded itself in this community, convened it and advised it, in addition to creating strong partnerships with key actors.
             </p>

@@ -73,7 +73,7 @@ const Index = () => {
       <HeroCarousel />
 
       {/* Membership Value Proposition */}
-      <section className="py-16 bg-muted/20">
+      <section className="py-16 bg-muted/20 border-t border-border/30">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
@@ -106,8 +106,8 @@ const Index = () => {
       <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-primary/5 relative overflow-hidden border-t border-primary/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
         <div className="container mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-up" style={{
@@ -139,8 +139,9 @@ const Index = () => {
       </section>
 
       {/* AI Agents Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-background/95 relative overflow-hidden border-t border-border/20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our AI Agents</h2>
@@ -165,7 +166,7 @@ const Index = () => {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-cobalt-light/5 to-primary/5 relative overflow-hidden border-t border-border/20">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,118,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[gradient_15s_ease_infinite]"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-up">

@@ -35,7 +35,7 @@ const Newsletter = () => {
     });
     setEmail("");
   };
-  return <section className="py-20 bg-gradient-to-br from-navy via-navy-light to-cobalt relative overflow-hidden">
+  return <section className="py-20 bg-gradient-to-br from-navy via-navy-light to-cobalt relative overflow-hidden border-t border-border/10">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent"></div>
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mx-auto text-center animate-fadeIn">

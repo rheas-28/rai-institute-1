@@ -26,94 +26,63 @@ import logoATB from "@/assets/logo-atb.webp";
 import logoSuncor from "@/assets/logo-suncor.png";
 import logoVFS from "@/assets/logo-vfs.png";
 import logoArmilla from "@/assets/logo-armilla.webp";
-
 const Index = () => {
-  const features = [
-    {
-      title: "Governance & Compliance",
-      description:
-        "Structured frameworks aligned with global standards to ensure your AI systems meet regulatory requirements and ethical guidelines.",
-      icon: Scale,
-    },
-    {
-      title: "Risk & Assurance",
-      description:
-        "Comprehensive risk assessment and mitigation strategies to identify, monitor, and address AI-related vulnerabilities proactively.",
-      icon: Shield,
-    },
-    {
-      title: "Alignment to Global Standards",
-      description:
-        "Certification pathways that align with ISO, NIST, EU AI Act, and other international frameworks for trustworthy AI.",
-      icon: Globe,
-    },
-    {
-      title: "Enterprise Readiness",
-      description:
-        "Practical tools and methodologies to accelerate your organization's journey to deploying production-ready responsible AI systems.",
-      icon: Rocket,
-    },
-  ];
-
-  const logos = [
-    logoKPMG,
-    logoMastercard,
-    logoAMD,
-    logoDow,
-    logoGenpact,
-    logoHCLTech,
-    logoOneTrust,
-    logoAlly,
-    logoATB,
-    logoSuncor,
-    logoVFS,
-    logoArmilla,
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const features = [{
+    title: "Governance & Compliance",
+    description: "Structured frameworks aligned with global standards to ensure your AI systems meet regulatory requirements and ethical guidelines.",
+    icon: Scale
+  }, {
+    title: "Risk & Assurance",
+    description: "Comprehensive risk assessment and mitigation strategies to identify, monitor, and address AI-related vulnerabilities proactively.",
+    icon: Shield
+  }, {
+    title: "Alignment to Global Standards",
+    description: "Certification pathways that align with ISO, NIST, EU AI Act, and other international frameworks for trustworthy AI.",
+    icon: Globe
+  }, {
+    title: "Enterprise Readiness",
+    description: "Practical tools and methodologies to accelerate your organization's journey to deploying production-ready responsible AI systems.",
+    icon: Rocket
+  }];
+  const logos = [logoKPMG, logoMastercard, logoAMD, logoDow, logoGenpact, logoHCLTech, logoOneTrust, logoAlly, logoATB, logoSuncor, logoVFS, logoArmilla];
+  return <div className="min-h-screen bg-background">
       <EventBanner />
       <Navigation />
       
-      <Hero
-        subtitle="Nonprofit Organization"
-        title="Building Trust in AI Through Standards & Certification"
-        description="The Responsible AI Institute advances trustworthy AI development through membership programs, certification pathways, and comprehensive resources aligned with global standards."
-        ctaText="Become a Member"
-        ctaLink="/join"
-        secondaryCtaText="Explore RAISE Pathways"
-        secondaryCtaLink="/raise-pathways"
-        backgroundImage={heroImage}
-      />
+      <Hero subtitle="Nonprofit Organization" title="Building Trust in AI Through Standards & Certification" description="The Responsible AI Institute advances trustworthy AI development through membership programs, certification pathways, and comprehensive resources aligned with global standards." ctaText="Become a Member" ctaLink="/join" secondaryCtaText="Explore RAISE Pathways" secondaryCtaLink="/raise-pathways" backgroundImage={heroImage} />
 
       <FeaturedContent />
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
 
-      <CardGrid
-        title="Why Choose Responsible AI Institute"
-        description="We provide the frameworks, tools, and community support you need to implement responsible AI practices."
-        items={features}
-      />
+      <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-subtle relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
         <div className="container mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <div className="animate-fade-up" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="text-4xl md:text-5xl font-bold text-cobalt-light mb-2 hover:scale-110 transition-transform duration-300">500+</div>
               <div className="text-muted-foreground">Member Organizations</div>
             </div>
-            <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <div className="animate-fade-up" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="text-4xl md:text-5xl font-bold text-cobalt-light mb-2 hover:scale-110 transition-transform duration-300">50+</div>
               <div className="text-muted-foreground">Countries Represented</div>
             </div>
-            <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="animate-fade-up" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="text-4xl md:text-5xl font-bold text-cobalt-light mb-2 hover:scale-110 transition-transform duration-300">1,200+</div>
               <div className="text-muted-foreground">Certified Systems</div>
             </div>
-            <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            <div className="animate-fade-up" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="text-4xl md:text-5xl font-bold text-cobalt-light mb-2 hover:scale-110 transition-transform duration-300">15+</div>
               <div className="text-muted-foreground">Standards Aligned</div>
             </div>
@@ -126,32 +95,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Our AI Agents</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our AI Agents</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Powered by advanced AI technology, our suite of agents helps organizations achieve and maintain responsible AI practices.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <FlipCard 
-                title="MIRA"
-                description="Diagnoses an organization's baseline maturity and readiness for Responsible AI practices."
-                icon={<Activity className="w-12 h-12" />}
-              />
-              <FlipCard 
-                title="VERA"
-                description="Independently verifies and validates Responsible AI compliance and integrity."
-                icon={<Shield className="w-12 h-12" />}
-              />
-              <FlipCard 
-                title="WATCHTOWER AGENT"
-                description="Aggregates, curates, and categorizes global news and updates related to Responsible AI, Sustainable AI, and AI Regulation, providing members with a trusted stream of high quality insights that inform readiness and verification."
-                icon={<Radar className="w-12 h-12" />}
-              />
-              <FlipCard 
-                title="LINK AGENT"
-                description="Connects members through the Responsible AI Hub ecosystem, driving collaboration, shared learning, and benchmarking across industries."
-                icon={<Network className="w-12 h-12" />}
-              />
+              <FlipCard title="MIRA" description="Diagnoses an organization's baseline maturity and readiness for Responsible AI practices." icon={<Activity className="w-12 h-12" />} />
+              <FlipCard title="VERA" description="Independently verifies and validates Responsible AI compliance and integrity." icon={<Shield className="w-12 h-12" />} />
+              <FlipCard title="WATCHTOWER AGENT" description="Aggregates, curates, and categorizes global news and updates related to Responsible AI, Sustainable AI, and AI Regulation, providing members with a trusted stream of high quality insights that inform readiness and verification." icon={<Radar className="w-12 h-12" />} />
+              <FlipCard title="LINK AGENT" description="Connects members through the Responsible AI Hub ecosystem, driving collaboration, shared learning, and benchmarking across industries." icon={<Network className="w-12 h-12" />} />
             </div>
           </div>
         </div>
@@ -189,8 +142,6 @@ const Index = () => {
       <Newsletter />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

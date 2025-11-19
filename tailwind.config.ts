@@ -50,27 +50,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        cta: {
-          primary: "hsl(var(--cta-primary))",
-          hover: "hsl(var(--cta-hover))",
-          foreground: "hsl(var(--cta-primary-foreground))",
-        },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
-        },
-        warning: {
-          DEFAULT: "hsl(var(--warning))",
-          foreground: "hsl(var(--warning-foreground))",
-        },
         navy: {
           darker: "hsl(var(--navy-darker))",
-          dark: "hsl(var(--navy-dark))",
-          medium: "hsl(var(--navy-medium))",
         },
         cobalt: {
           light: "hsl(var(--cobalt-light))",
-          bright: "hsl(var(--cobalt-bright))",
         },
         gray: {
           cool: "hsl(var(--gray-cool))",

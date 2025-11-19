@@ -57,7 +57,7 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-muted/30 border-y border-border/30 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-cobalt-light/5 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,118,255,0.03)_50%,transparent_75%)] bg-[length:250%_250%] animate-[gradient_20s_ease_infinite]"></div>
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-12 animate-fadeIn">

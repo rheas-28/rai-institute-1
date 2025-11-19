@@ -40,8 +40,7 @@ const BlogGrid = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30 border-y border-border/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cta-primary/5 via-transparent to-transparent"></div>
+    <section className="py-20 bg-secondary/30 relative overflow-hidden">
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-12 animate-fadeIn">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

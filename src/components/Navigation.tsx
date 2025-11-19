@@ -137,6 +137,19 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
+                            to="/enterprise"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Support for Enterprise Leaders</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Resources and partnerships for enterprise AI governance
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
                             to="/raise-pathways"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -169,19 +182,6 @@ const Navigation = () => {
                             <div className="text-sm font-medium leading-none">Community</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Connect with enterprise AI leaders and peers
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/enterprise"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Support for Enterprise Leaders</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Resources and partnerships for enterprise AI governance
                             </p>
                           </Link>
                         </NavigationMenuLink>

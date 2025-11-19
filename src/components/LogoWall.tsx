@@ -21,12 +21,12 @@ const LogoWall = ({ title, logos }: LogoWallProps) => {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center flex-shrink-0 w-48 h-32 opacity-95 hover:opacity-100 transition-all duration-500 grayscale-0 hover:scale-110"
+                className="flex items-center justify-center flex-shrink-0 w-48 h-32 bg-white rounded-lg p-4 opacity-95 hover:opacity-100 transition-all duration-500 hover:scale-110"
               >
                 <img
                   src={logo}
                   alt={`Partner logo ${index + 1}`}
-                  className="max-h-32 max-w-full w-auto object-contain transition-all duration-500"
+                  className="max-h-full max-w-full w-auto object-contain transition-all duration-500"
                 />
               </div>
             ))}

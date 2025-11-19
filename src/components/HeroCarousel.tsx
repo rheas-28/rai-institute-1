@@ -78,7 +78,7 @@ const HeroCarousel = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative border-b border-border/30 shadow-2xl">
       <Carousel
         opts={{
           align: "start",
@@ -100,7 +100,7 @@ const HeroCarousel = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-navy-darker/95 via-navy-darker/85 to-navy-darker/60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-navy-darker/90 via-navy-darker/70 to-navy-darker/40"></div>
                 </div>
 
                 {/* Content */}
@@ -114,21 +114,21 @@ const HeroCarousel = () => {
                     <p className="text-cobalt-light text-lg mb-4 font-medium">
                       {slide.subtitle}
                     </p>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
                       {slide.title}
                     </h1>
-                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-lg">
                       {slide.description}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Link to={slide.ctaLink}>
-                        <Button size="lg" className="w-full sm:w-auto">
+                        <Button size="lg" className="w-full sm:w-auto bg-cta-primary hover:bg-cta-hover text-cta-primary-foreground shadow-cta hover:shadow-glow font-semibold" data-cta-location={`hero-slide-${index}`}>
                           {slide.ctaText}
                         </Button>
                       </Link>
                       {slide.secondaryCtaText && slide.secondaryCtaLink && (
                         <Link to={slide.secondaryCtaLink}>
-                          <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                          <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white/50 text-white hover:bg-white/10 hover:border-white backdrop-blur-sm">
                             {slide.secondaryCtaText}
                           </Button>
                         </Link>
@@ -138,12 +138,12 @@ const HeroCarousel = () => {
                 </div>
 
                 {/* Slide Indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10 bg-background/30 backdrop-blur-md px-4 py-3 rounded-full border border-border/50">
                   {slides.map((_, idx) => (
                     <div
                       key={idx}
-                      className={`h-1 rounded-full transition-all duration-300 ${
-                        idx === index ? "w-8 bg-primary" : "w-4 bg-muted-foreground/30"
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        idx === index ? "w-12 bg-cta-primary shadow-cta" : "w-6 bg-muted-foreground/40 hover:bg-muted-foreground/60"
                       }`}
                     />
                   ))}
@@ -154,8 +154,8 @@ const HeroCarousel = () => {
         </CarouselContent>
         
         {/* Navigation Buttons */}
-        <CarouselPrevious className="left-4 md:left-8" />
-        <CarouselNext className="right-4 md:right-8" />
+        <CarouselPrevious className="left-4 md:left-8 w-12 h-12 border-2 border-border/50 bg-background/40 backdrop-blur-md hover:bg-background/60 hover:border-cta-primary/50 hover:scale-110 transition-all shadow-lg" />
+        <CarouselNext className="right-4 md:right-8 w-12 h-12 border-2 border-border/50 bg-background/40 backdrop-blur-md hover:bg-background/60 hover:border-cta-primary/50 hover:scale-110 transition-all shadow-lg" />
       </Carousel>
     </div>
   );

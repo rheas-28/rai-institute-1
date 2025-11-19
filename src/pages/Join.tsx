@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CardGrid from "@/components/CardGrid";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import MembershipComparison from "@/components/MembershipComparison";
 import { Check } from "lucide-react";
 import communityImage from "@/assets/community-network.jpg";
 
@@ -97,6 +98,9 @@ const Join = () => {
         description="Choose the membership tier that fits your needs"
         items={membershipTiers}
       />
+
+      {/* Membership Comparison Table */}
+      <MembershipComparison />
 
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">

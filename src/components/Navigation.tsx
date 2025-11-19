@@ -40,16 +40,88 @@ const Navigation = () => {
             >
               Home
             </Link>
-            <Link
-              to="/who-we-are"
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/who-we-are")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Who We Are
-            </Link>
+            
+            {/* Who We Are Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
+                    isActive("/who-we-are") ? "text-primary" : "text-muted-foreground"
+                  }`}>
+                    Who We Are
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/who-we-are#about-us"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">About Us</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Our mission, approach, and core values
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/who-we-are#team"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">RAI Board</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Meet our board members and leadership team
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/who-we-are#team"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">RAI Fellows</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Our expert advisors and thought leaders
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/who-we-are#team"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">RAI Advisors</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Our advisory network and strategic partners
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/who-we-are#rai-community"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">RAI Community</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Our members and ecosystem collaborators
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             
             {/* What We Offer Dropdown */}
             <NavigationMenu>
@@ -297,7 +369,15 @@ const Navigation = () => {
         {isOpen && (
           <div className="lg:hidden py-4 space-y-2 border-t border-border">
             <Link to="/" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Home</Link>
-            <Link to="/who-we-are" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Who We Are</Link>
+            
+            <div className="pt-2">
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Who We Are</div>
+              <Link to="/who-we-are#about-us" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>About Us</Link>
+              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Board</Link>
+              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Fellows</Link>
+              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Advisors</Link>
+              <Link to="/who-we-are#rai-community" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Community</Link>
+            </div>
             
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">What We Offer</div>

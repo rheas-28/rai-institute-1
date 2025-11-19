@@ -125,7 +125,7 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
-                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
+                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook", "/news"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
                   }`}>
                     Resources
                   </NavigationMenuTrigger>
@@ -183,22 +183,25 @@ const Navigation = () => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/news"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Blogs</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Latest insights and thought leadership on responsible AI
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link
-              to="/news"
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/news")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Blogs
-            </Link>
             <Link
               to="/faq"
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -258,9 +261,9 @@ const Navigation = () => {
               <Link to="/ai-policy-template" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-policy-template") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Policy Template</Link>
               <Link to="/ai-maturity-assessment" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-maturity-assessment") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Maturity Assessment</Link>
               <Link to="/responsible-ai-handbook" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/responsible-ai-handbook") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Responsible AI Handbook</Link>
+              <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Blogs</Link>
             </div>
 
-            <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Blogs</Link>
             <Link to="/faq" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/faq") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>FAQ</Link>
             <Link to="/careers" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/careers") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Careers</Link>
             <div className="pt-4"><Button asChild className="w-full"><Link to="/join" onClick={() => setIsOpen(false)}>Become a Member</Link></Button></div>

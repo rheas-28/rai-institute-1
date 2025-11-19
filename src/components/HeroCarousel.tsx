@@ -154,8 +154,8 @@ const HeroCarousel = () => {
         </CarouselContent>
         
         {/* Navigation Buttons */}
-        <CarouselPrevious className="left-4 md:left-8" />
-        <CarouselNext className="right-4 md:right-8" />
+        <CarouselPrevious className="left-2" />
+        <CarouselNext className="right-2" />
       </Carousel>
     </div>
   );

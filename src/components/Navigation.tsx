@@ -68,7 +68,7 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/who-we-are#team"
+                            to="/who-we-are#rai-board"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">RAI Board</div>
@@ -81,7 +81,7 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/who-we-are#team"
+                            to="/who-we-are#rai-fellows"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">RAI Fellows</div>
@@ -94,7 +94,7 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/who-we-are#team"
+                            to="/who-we-are#rai-advisors"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">RAI Advisors</div>
@@ -373,9 +373,9 @@ const Navigation = () => {
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Who We Are</div>
               <Link to="/who-we-are#about-us" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>About Us</Link>
-              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Board</Link>
-              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Fellows</Link>
-              <Link to="/who-we-are#team" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Advisors</Link>
+              <Link to="/who-we-are#rai-board" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Board</Link>
+              <Link to="/who-we-are#rai-fellows" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Fellows</Link>
+              <Link to="/who-we-are#rai-advisors" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Advisors</Link>
               <Link to="/who-we-are#rai-community" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/who-we-are") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>RAI Community</Link>
             </div>
             

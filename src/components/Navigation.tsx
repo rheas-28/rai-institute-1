@@ -285,6 +285,7 @@ const Navigation = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
+            </NavigationMenu>
 
             <Link
               to="/community"
@@ -300,25 +301,6 @@ const Navigation = () => {
             <Button asChild className="bg-cta-primary hover:bg-cta-hover text-cta-primary-foreground font-semibold shadow-cta" size="sm">
               <Link to="/join" data-cta-location="nav-primary">Membership</Link>
             </Button>
-
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/faq")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              FAQ
-            </Link>
-            <Link
-              to="/careers"
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive("/careers")
-                  ? "text-primary bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              }`}
-            >
-              Careers
-            </Link>
           </div>
 
           {/* CTA Button */}

@@ -10,7 +10,6 @@ import BlogGrid from "@/components/BlogGrid";
 import ResourceHub from "@/components/ResourceHub";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
-import MembershipComparison from "@/components/MembershipComparison";
 import FloatingCTA from "@/components/FloatingCTA";
 import { Shield, Scale, Globe, Rocket, Activity, Radar, Network, Users, Award, Lightbulb } from "lucide-react";
 import FlipCard from "@/components/FlipCard";
@@ -103,8 +102,6 @@ const Index = () => {
       </section>
 
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
-
-      <MembershipComparison />
 
       <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />
 

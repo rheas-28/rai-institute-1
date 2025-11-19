@@ -51,9 +51,9 @@ const Index = () => {
       
       <Hero subtitle="Nonprofit Organization" title="Building Trust in AI Through Standards & Certification" description="The Responsible AI Institute advances trustworthy AI development through membership programs, certification pathways, and comprehensive resources aligned with global standards." ctaText="Become a Member" ctaLink="/join" secondaryCtaText="Explore RAISE Pathways" secondaryCtaLink="/raise-pathways" backgroundImage={heroImage} />
 
-      <FeaturedContent />
-
       <LogoWall title="Trusted by Leading Organizations" logos={logos} />
+
+      <FeaturedContent />
 
       <CardGrid title="Why Choose Responsible AI Institute" description="We provide the frameworks, tools, and community support you need to implement responsible AI practices." items={features} />
 

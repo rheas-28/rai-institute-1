@@ -17,6 +17,13 @@ import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Community from "./pages/Community";
 import Enterprise from "./pages/Enterprise";
+import RAIControlsLibrary from "./pages/RAIControlsLibrary";
+import VerificationBadges from "./pages/VerificationBadges";
+import RAISEAgents from "./pages/RAISEAgents";
+import RAISEPathwaysAssets from "./pages/RAISEPathwaysAssets";
+import CaseStudies from "./pages/CaseStudies";
+import AICodeOfConduct from "./pages/AICodeOfConduct";
+import EventsArchive from "./pages/EventsArchive";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +50,13 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/rai-controls-library" element={<RAIControlsLibrary />} />
+          <Route path="/verification-badges" element={<VerificationBadges />} />
+          <Route path="/raise-agents" element={<RAISEAgents />} />
+          <Route path="/raise-pathways-assets" element={<RAISEPathwaysAssets />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/ai-code-of-conduct" element={<AICodeOfConduct />} />
+          <Route path="/events-archive" element={<EventsArchive />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

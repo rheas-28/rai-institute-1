@@ -141,13 +141,13 @@ const WhoWeAre = () => {
             
             <Tabs defaultValue="board" className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-                <TabsTrigger value="board" id="rai-board">Board Members</TabsTrigger>
-                <TabsTrigger value="expert-advisors" id="rai-fellows">Expert Advisors</TabsTrigger>
-                <TabsTrigger value="advisors" id="rai-advisors">Advisors</TabsTrigger>
+                <TabsTrigger value="board">Board Members</TabsTrigger>
+                <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
+                <TabsTrigger value="advisors">Advisors</TabsTrigger>
               </TabsList>
 
               {/* Board Members Tab */}
-              <TabsContent value="board" className="animate-fade-up">
+              <TabsContent value="board" id="rai-board" className="animate-fade-up">
                 <div className="grid md:grid-cols-3 gap-8">
                   {[
                     {
@@ -191,7 +191,7 @@ const WhoWeAre = () => {
               </TabsContent>
 
               {/* Expert Advisors Tab */}
-              <TabsContent value="expert-advisors" className="animate-fade-up">
+              <TabsContent value="expert-advisors" id="rai-fellows" className="animate-fade-up">
                 <div className="grid md:grid-cols-4 gap-6">
                   {[
                     {
@@ -330,7 +330,7 @@ const WhoWeAre = () => {
               </TabsContent>
 
               {/* Advisors Tab */}
-              <TabsContent value="advisors" className="animate-fade-up">
+              <TabsContent value="advisors" id="rai-advisors" className="animate-fade-up">
                 <div className="grid md:grid-cols-3 gap-8">
                   {[
                     {

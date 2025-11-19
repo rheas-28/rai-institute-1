@@ -191,7 +191,19 @@ const Navigation = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-
+            
+            {/* Our Agents Link */}
+            <Link
+              to="/raise-agents"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive("/raise-agents")
+                  ? "text-primary bg-secondary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+              }`}
+            >
+              Our Agents
+            </Link>
+            
             {/* Resources Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
@@ -386,6 +398,8 @@ const Navigation = () => {
               <Link to="/community" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/community") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Community</Link>
               <Link to="/enterprise" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/enterprise") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Support for Enterprise Leaders</Link>
             </div>
+
+            <Link to="/raise-agents" onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive("/raise-agents") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Our Agents</Link>
 
             <div className="pt-2">
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Resources</div>

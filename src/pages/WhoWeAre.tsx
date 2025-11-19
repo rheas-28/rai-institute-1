@@ -78,7 +78,7 @@ const WhoWeAre = () => {
         backgroundImage={teamImage}
       />
 
-      <section className="py-20">
+      <section id="about-us" className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-8 text-lg text-muted-foreground">
             <div className="animate-fade-up">
@@ -130,7 +130,7 @@ const WhoWeAre = () => {
         columns={2}
       />
 
-      <section className="py-20 bg-card relative overflow-hidden">
+      <section id="team" className="py-20 bg-card relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
@@ -141,9 +141,9 @@ const WhoWeAre = () => {
             
             <Tabs defaultValue="board" className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-                <TabsTrigger value="board">Board Members</TabsTrigger>
-                <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
-                <TabsTrigger value="advisors">Advisors</TabsTrigger>
+                <TabsTrigger value="board" id="rai-board">Board Members</TabsTrigger>
+                <TabsTrigger value="expert-advisors" id="rai-fellows">Expert Advisors</TabsTrigger>
+                <TabsTrigger value="advisors" id="rai-advisors">Advisors</TabsTrigger>
               </TabsList>
 
               {/* Board Members Tab */}
@@ -397,7 +397,7 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section id="rai-community" className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">RAI Institute Community</h2>

@@ -11,7 +11,10 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import heroImage1 from "@/assets/hero-ai-governance-network.jpg";
-import heroImage2 from "@/assets/hero-ai-network.jpg";
+import heroWebinar from "@/assets/hero-webinar-genpact.jpg";
+import heroMaturity from "@/assets/hero-ai-maturity.jpg";
+import heroHandbook from "@/assets/hero-handbook.jpg";
+import heroPolicy from "@/assets/hero-policy-template.jpg";
 
 interface HeroSlide {
   title: string;
@@ -43,7 +46,7 @@ const HeroCarousel = () => {
       description: "Watch this on-demand session with Genpact's VP of AI/ML, Megha Sinha, for practical insights on building responsible AI into real-world systems.",
       ctaText: "Watch the Recording",
       ctaLink: "/case-studies",
-      backgroundImage: heroImage2,
+      backgroundImage: heroWebinar,
       badge: "Featured Webinar",
     },
     {
@@ -52,7 +55,7 @@ const HeroCarousel = () => {
       description: "Take our 5-minute AI Maturity Assessment to benchmark your current efforts and get clear, actionable next steps.",
       ctaText: "Start the Assessment",
       ctaLink: "/ai-maturity-assessment",
-      backgroundImage: heroImage1,
+      backgroundImage: heroMaturity,
     },
     {
       title: "Responsible AI Handbook",
@@ -60,7 +63,7 @@ const HeroCarousel = () => {
       description: "Get a practical, enterprise-ready guide to building responsible AI. Includes governance frameworks, C-suite checklists, and a 5-stage maturity model aligned with global standards.",
       ctaText: "Get the Handbook",
       ctaLink: "/responsible-ai-handbook",
-      backgroundImage: heroImage2,
+      backgroundImage: heroHandbook,
       badge: "Free Resource",
     },
     {
@@ -69,7 +72,7 @@ const HeroCarousel = () => {
       description: "This template gives you a proven foundation to govern how AI is developed, bought, and used—aligned with ISO, NIST, and other leading frameworks.",
       ctaText: "Download the Template",
       ctaLink: "/ai-policy-template",
-      backgroundImage: heroImage1,
+      backgroundImage: heroPolicy,
       badge: "New Release",
     },
   ];

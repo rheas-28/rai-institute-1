@@ -8,8 +8,8 @@ const LogoWall = ({ title, logos }: LogoWallProps) => {
   const duplicatedLogos = [...logos, ...logos];
   
   return (
-      <section className="py-16 bg-background border-t border-border/20">
-        <div className="container mx-auto px-6">
+    <section className="py-16 bg-navy-darker border-y border-primary/20">
+      <div className="container mx-auto px-6">
           {title && (
             <h3 className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-wider mb-8">
               {title}

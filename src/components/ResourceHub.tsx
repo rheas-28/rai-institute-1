@@ -47,7 +47,7 @@ const ResourceHub = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden border-t border-border/20">
+    <section className="py-20 bg-navy-darker border-y border-primary/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-success/5 via-transparent to-transparent"></div>
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-12 animate-fadeIn">

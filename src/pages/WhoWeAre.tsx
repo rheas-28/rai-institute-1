@@ -4,6 +4,8 @@ import CardGrid from "@/components/CardGrid";
 import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Target, Heart, Globe, Lightbulb, Compass, CheckCircle, Users } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import teamImage from "@/assets/team-collaboration.jpg";
 import manojSaxena from "@/assets/team-manoj-saxena.jpg";
 import alkaPatel from "@/assets/team-alka-patel.jpg";
@@ -45,6 +47,29 @@ import saimaShafiq from "@/assets/team-saima-shafiq.jpeg";
 import ashleyCasovan from "@/assets/team-ashley-casovan.jpeg";
 
 const WhoWeAre = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("board");
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash === 'rai-board') {
+      setActiveTab('board');
+      setTimeout(() => document.getElementById('rai-board')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-fellows') {
+      setActiveTab('expert-advisors');
+      setTimeout(() => document.getElementById('rai-fellows')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-advisors') {
+      setActiveTab('advisors');
+      setTimeout(() => document.getElementById('rai-advisors')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'team') {
+      setTimeout(() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'about-us') {
+      setTimeout(() => document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    } else if (hash === 'rai-community') {
+      setTimeout(() => document.getElementById('rai-community')?.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  }, [location]);
+
   const values = [
     {
       title: "Standards-Driven",
@@ -139,7 +164,7 @@ const WhoWeAre = () => {
               Our leaders, staff, board members and advisors all share a profound care for and understanding of responsible AI. They know that responsible AI matters and that it has serious implications for businesses, governments and society.
             </p>
             
-            <Tabs defaultValue="board" className="w-full">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
                 <TabsTrigger value="board">RAI Board</TabsTrigger>
                 <TabsTrigger value="expert-advisors">RAI Fellows</TabsTrigger>

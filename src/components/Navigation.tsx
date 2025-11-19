@@ -125,7 +125,7 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={`px-4 py-2 text-sm font-medium ${
-                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook", "/news", "/rai-controls-library", "/verification-badges", "/raise-agents", "/raise-pathways-assets", "/case-studies", "/ai-code-of-conduct", "/events-archive"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
+                    ["/tools-guides", "/ai-policy-template", "/ai-maturity-assessment", "/responsible-ai-handbook", "/news", "/blog", "/rai-controls-library", "/verification-badges", "/raise-agents", "/raise-pathways-assets", "/case-studies", "/ai-code-of-conduct", "/events-archive"].includes(location.pathname) ? "text-primary" : "text-muted-foreground"
                   }`}>
                     Resources
                   </NavigationMenuTrigger>
@@ -225,6 +225,19 @@ const Navigation = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
+                            to="/blog"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Blogs</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Read our latest blog posts and articles
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
                             to="/events-archive"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -303,6 +316,7 @@ const Navigation = () => {
               <Link to="/case-studies" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/case-studies") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Member Case Studies</Link>
               <Link to="/ai-code-of-conduct" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/ai-code-of-conduct") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>AI Code of Conduct</Link>
               <Link to="/news" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/news") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Research, Reports & Blogs</Link>
+              <Link to="/blog" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/blog") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Blogs</Link>
               <Link to="/events-archive" onClick={() => setIsOpen(false)} className={`block px-6 py-2 rounded-md text-sm transition-colors ${isActive("/events-archive") ? "text-primary bg-secondary" : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"}`}>Events & Webinars Archive</Link>
             </div>
 

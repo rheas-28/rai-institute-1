@@ -142,8 +142,8 @@ const WhoWeAre = () => {
             <Tabs defaultValue="board" className="w-full">
               <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
                 <TabsTrigger value="board">RAI Board</TabsTrigger>
-                <TabsTrigger value="expert-advisors">Expert Advisors</TabsTrigger>
-                <TabsTrigger value="advisors">Advisors</TabsTrigger>
+                <TabsTrigger value="expert-advisors">RAI Fellows</TabsTrigger>
+                <TabsTrigger value="advisors">RAI Advisors</TabsTrigger>
               </TabsList>
 
               {/* Board Members Tab */}
@@ -400,7 +400,7 @@ const WhoWeAre = () => {
       <section id="rai-community" className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">RAI Institute Community</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6 text-center animate-fade-up">RAI Community</h2>
             <p className="text-center text-muted-foreground mb-16 text-lg max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s' }}>
               The responsible AI ecosystem is made up of all types of organizations, from private sector companies, regulators, standards organizations, academic institutions, civil society, individual experts, and many more. Over the years RAII has embedded itself in this community, convened it and advised it, in addition to creating strong partnerships with key actors.
             </p>

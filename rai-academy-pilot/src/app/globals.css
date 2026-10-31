@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/*
+ * RAI brand tokens. Placeholder values until RAI supplies brand colours;
+ * change them here only. Keep text/background pairs at WCAG AA contrast.
+ */
+:root {
+  --brand-primary: #1f3a5f;
+  --brand-primary-contrast: #ffffff;
+  --brand-accent: #2f7d6d;
+  --brand-surface: #f5f7fa;
+  --brand-border: #d5dbe3;
+  --brand-text: #1a1f29;
+  --brand-muted: #4a5568;
+  --brand-danger: #b42318;
+}
+
+@theme inline {
+  --color-brand: var(--brand-primary);
+  --color-brand-contrast: var(--brand-primary-contrast);
+  --color-accent: var(--brand-accent);
+  --color-surface: var(--brand-surface);
+  --color-line: var(--brand-border);
+  --color-ink: var(--brand-text);
+  --color-muted: var(--brand-muted);
+  --color-danger: var(--brand-danger);
+  --font-sans: var(--font-roboto);
+}
+
+body {
+  background: #ffffff;
+  color: var(--brand-text);
+  font-family: var(--font-roboto), sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand-accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,30 @@
+name: RAI Academy Pilot CI
+
+on:
+  pull_request:
+    paths: ["rai-academy-pilot/**", ".github/workflows/rai-academy-pilot-ci.yml"]
+  push:
+    branches: [main]
+    paths: ["rai-academy-pilot/**", ".github/workflows/rai-academy-pilot-ci.yml"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rai-academy-pilot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: rai-academy-pilot/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npx supabase start -x studio,imgproxy,edge-runtime,logflare,vector,supavisor
+      - run: npm run env:local
+      - run: npm run seed
+      - run: npm test
+      - run: npm run build

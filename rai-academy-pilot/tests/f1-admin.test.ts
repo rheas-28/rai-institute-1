@@ -208,3 +208,17 @@ describe("F1 content items", () => {
     expect(error).not.toBeNull();
   });
 });
+
+describe("F1 admin page queries", () => {
+  it("resolve every embedded relationship the admin pages use", async () => {
+    const queries = [
+      adminDb.from("organizations").select("id, name, sector, cohorts(id, participants(id)), client_packs(version)"),
+      adminDb.from("cohorts").select("id, name, access_code, start_date, current_round, participants(id)"),
+      adminDb.from("participants").select("id, name, email, layer, role_title, user_id, cohorts(name)"),
+    ];
+    for (const { error, data } of await Promise.all(queries)) {
+      expect(error).toBeNull();
+      expect(data?.length).toBeGreaterThan(0);
+    }
+  });
+});

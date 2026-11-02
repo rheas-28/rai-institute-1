@@ -7,10 +7,11 @@ import { createOrganizationAction } from "./actions";
 
 export default async function AdminHome() {
   const supabase = await createClient();
-  const { data: orgs } = await supabase
+  const { data: orgs, error } = await supabase
     .from("organizations")
-    .select("id, name, sector, cohorts(id), participants(id), client_packs(version)")
+    .select("id, name, sector, cohorts(id, participants(id)), client_packs(version)")
     .order("name");
+  if (error) throw new Error(`Could not load organizations: ${error.message}`);
 
   return (
     <div className="flex flex-col gap-6">
@@ -22,13 +23,14 @@ export default async function AdminHome() {
           <ul className="divide-y divide-line">
             {orgs.map((org) => {
               const latest = Math.max(0, ...org.client_packs.map((p: { version: number }) => p.version));
+              const participants = org.cohorts.reduce((n, c) => n + c.participants.length, 0);
               return (
                 <li key={org.id} className="py-3">
                   <Link href={`/admin/orgs/${org.id}`} className="font-medium text-brand underline-offset-4 hover:underline">
                     {org.name}
                   </Link>
                   <p className="text-sm text-muted">
-                    {[org.sector, `${org.cohorts.length} cohort(s)`, `${org.participants.length} participant(s)`,
+                    {[org.sector, `${org.cohorts.length} cohort(s)`, `${participants} participant(s)`,
                       latest ? `client pack v${latest}` : "no client pack"]
                       .filter(Boolean)
                       .join(" · ")}

@@ -53,12 +53,13 @@ export const FAKE_SNAPSHOT = {
   ],
 };
 
+// An answer containing BADJSON makes every later snapshot attempt invalid,
+// to exercise the retry-then-error path.
 export const fakeModel: ChatModel = async (system, messages) => {
-  const last = messages.at(-1)?.content ?? "";
-  if (last.includes("BADJSON")) return '{"inventory": "not a list"}';
-  const answers = messages.filter((m) => m.role === "user").length - 1;
+  const poisoned = messages.some((m) => m.role === "user" && m.content.includes("BADJSON"));
+  const answers = messages.filter((m) => m.role === "user" && !m.content.startsWith("That was not a valid snapshot")).length - 1;
   if (system.includes("The interview is over") || answers >= QUESTIONS.length) {
-    return JSON.stringify(FAKE_SNAPSHOT);
+    return poisoned ? '{"inventory": "not a list"}' : JSON.stringify(FAKE_SNAPSHOT);
   }
   return QUESTIONS[answers] ?? QUESTIONS[QUESTIONS.length - 1];
 };

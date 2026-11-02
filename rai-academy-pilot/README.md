@@ -12,7 +12,7 @@ security, magic-link auth), Anthropic Messages API, Vercel.
 | Step | Scope | State |
 | --- | --- | --- |
 | 1 | Scaffold: schema + RLS, magic-link auth and roles, seed, styling | done |
-| 2 | F1 Admin and client-pack loader | |
+| 2 | F1 Admin and client-pack loader | in review |
 | 3 | F2 Shadow AI Self-Check | |
 | 4 | F3 Sponsor dashboard | |
 | 5 | F4 Fluency Coach | |
@@ -65,6 +65,25 @@ Sign-in is invite-only: an `app_users` row must exist for the email (created by
 an admin or by participant import). A database trigger rejects any other new
 auth user. Self-Check runs are written by server code with the service role
 after validating the cohort access code.
+
+## Admin (F1)
+
+Signed in as admin, `/admin` lets RAI:
+
+- create organizations, invite sponsors, create cohorts (an access code such as
+  `K7QM-3XPA` is generated) and switch a cohort between `baseline` and `readout`;
+- load a client pack: upload the policy (PDF, DOCX or Markdown, max 10 MB), check
+  and edit the extracted text, add approved tools and the shared use case. Each
+  save is a new version; earlier versions stay readable and cannot be changed.
+  Only the confirmed text is stored, not the uploaded file;
+- import participants from CSV (`email,name,layer,role_title`): a preview lists
+  errors per row, then valid rows are invited and enrolled in one transaction;
+- create and edit content items (module, scenario, rubric, prompt) as Markdown
+  or JSON. JSON is validated in the app and by the database;
+- read the audit log. Every admin action above writes an entry.
+
+All writes go through the signed-in admin's session, so RLS decides what is
+allowed; inputs are validated server-side with Zod.
 
 ## Data model
 

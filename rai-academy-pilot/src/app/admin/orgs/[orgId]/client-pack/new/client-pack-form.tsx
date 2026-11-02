@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import { extractPolicyAction, saveClientPackAction, type ExtractState } from "@/app/admin/actions";
+import { submitKeepingValues } from "@/components/action-form";
 import { Card } from "@/components/app-shell";
 import { Field, buttonClass, inputClass, secondaryButtonClass } from "@/components/form";
 import { IDLE } from "@/lib/action-state";
@@ -46,7 +47,7 @@ export function ClientPackForm({
   return (
     <div className="flex flex-col gap-6">
       <Card title="1. Upload the policy">
-        <form action={extractAction} className="flex flex-col gap-3">
+        <form action={extractAction} onSubmit={submitKeepingValues(extractAction)} className="flex flex-col gap-3">
           <Field label="Policy file" htmlFor="policy-file" hint="PDF, DOCX or Markdown, up to 10 MB. The text is extracted for you to check; the file itself is not stored.">
             <input id="policy-file" name="policy_file" type="file" required accept=".pdf,.docx,.md,.markdown,.txt" className={inputClass} />
           </Field>
@@ -63,7 +64,7 @@ export function ClientPackForm({
         </form>
       </Card>
 
-      <form action={saveAction} className="flex flex-col gap-6">
+      <form action={saveAction} onSubmit={submitKeepingValues(saveAction)} className="flex flex-col gap-6">
         <input type="hidden" name="org_id" value={orgId} />
         <Card title="2. Check the policy text">
           <Field label="Policy text" htmlFor="policy-text" hint={source ? `From ${source}. Edit if the extraction missed or garbled anything.` : "Upload a file above, or paste the text here."}>

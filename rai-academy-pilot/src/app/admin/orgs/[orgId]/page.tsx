@@ -94,7 +94,7 @@ export default async function OrgPage({ params, searchParams }: Props) {
                     <td className="py-2 pr-4">{c.start_date ?? "—"}</td>
                     <td className="py-2 pr-4">{c.participants.length}</td>
                     <td className="py-2">
-                      <ActionForm action={setCohortRoundAction} submitLabel="Set" secondary className="flex flex-wrap items-center gap-2">
+                      <ActionForm action={setCohortRoundAction} submitLabel="Set" secondary resetOnSuccess={false} className="flex flex-wrap items-center gap-2">
                         <input type="hidden" name="org_id" value={orgId} />
                         <input type="hidden" name="cohort_id" value={c.id} />
                         <label className="sr-only" htmlFor={`round-${c.id}`}>Round for {c.name}</label>

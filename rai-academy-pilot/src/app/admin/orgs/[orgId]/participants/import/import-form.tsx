@@ -2,7 +2,7 @@
 
 import { useActionState } from "react";
 import { checkImportAction, importParticipantsAction, type ImportState } from "@/app/admin/actions";
-import { ActionForm } from "@/components/action-form";
+import { ActionForm, submitKeepingValues } from "@/components/action-form";
 import { Card } from "@/components/app-shell";
 import { Field, inputClass, secondaryButtonClass } from "@/components/form";
 import { IDLE } from "@/lib/action-state";
@@ -16,7 +16,7 @@ export function ImportForm({ orgId, cohorts }: { orgId: string; cohorts: { id: s
   return (
     <div className="flex flex-col gap-6">
       <Card title="1. Choose the file">
-        <form action={action} className="flex flex-col gap-3">
+        <form action={action} onSubmit={submitKeepingValues(action)} className="flex flex-col gap-3">
           <input type="hidden" name="org_id" value={orgId} />
           <Field label="Cohort" htmlFor="cohort">
             <select id="cohort" name="cohort_id" defaultValue={state.cohortId ?? cohorts[0].id} className={inputClass}>

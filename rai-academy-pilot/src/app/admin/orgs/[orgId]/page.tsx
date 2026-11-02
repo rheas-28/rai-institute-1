@@ -173,7 +173,7 @@ export default async function OrgPage({ params, searchParams }: Props) {
           Runs saved: {runCount("baseline")} baseline, {runCount("readout")} readout. Runs are anonymous and only
           shown to sponsors as totals.
         </p>
-        <ActionForm action={deleteSelfcheckRunsAction} submitLabel="Delete runs" pendingLabel="Deleting…" secondary
+        <ActionForm action={deleteSelfcheckRunsAction} submitLabel="Delete runs" pendingLabel="Deleting…" secondary resetOnSuccess={false}
           className="flex flex-wrap items-end gap-2" confirm="Delete these Self-Check runs? This can't be undone.">
           <input type="hidden" name="org_id" value={orgId} />
           <Field label="Delete Self-Check runs for" htmlFor="delete-round">

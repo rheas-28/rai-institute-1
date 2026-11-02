@@ -53,7 +53,7 @@ async function main() {
     if (!existing?.length) check("client_packs insert", await db.from("client_packs").insert(pack));
   }
 
-  check("content_items", await db.from("content_items").upsert(data.contentItems, { onConflict: "slug,version" }));
+  check("content_items", await db.from("content_items").upsert(data.contentItems, { onConflict: "slug" }));
 
   console.log(`Seeded ${data.organizations.length} organizations and ${appUsers.length} users.`);
   console.log("Sign in locally with any of:");

@@ -18,14 +18,14 @@ export const cohorts = [
     id: COHORT_NORTHWIND,
     org_id: ORG_NORTHWIND,
     name: "Northwind pilot cohort 1",
-    access_code: "NWIND-PILOT-01",
+    access_code: "NWND-7K2P",
     start_date: "2026-11-09",
   },
   {
     id: COHORT_FABRIKAM,
     org_id: ORG_FABRIKAM,
     name: "Fabrikam pilot cohort 1",
-    access_code: "FABRK-PILOT-01",
+    access_code: "FBRK-4M9Q",
     start_date: "2026-11-16",
   },
 ];

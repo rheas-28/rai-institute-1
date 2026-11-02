@@ -13,7 +13,7 @@ security, magic-link auth), Anthropic Messages API, Vercel.
 | --- | --- | --- |
 | 1 | Scaffold: schema + RLS, magic-link auth and roles, seed, styling | done |
 | 2 | F1 Admin and client-pack loader | in review |
-| 3 | F2 Shadow AI Self-Check | |
+| 3 | F2 Shadow AI Self-Check | in review |
 | 4 | F3 Sponsor dashboard | |
 | 5 | F4 Fluency Coach | |
 | 6 | Pre-Day 1 hardening | |
@@ -84,6 +84,34 @@ Signed in as admin, `/admin` lets RAI:
 
 All writes go through the signed-in admin's session, so RLS decides what is
 allowed; inputs are validated server-side with Zod.
+
+## Shadow AI Self-Check (F2)
+
+Respondents open `/selfcheck?code=ACCESS-CODE` (the admin org page lists each
+cohort's link), enter the access code and a team label, and chat with the
+agent. No account, name, email, IP address, user agent or transcript is stored.
+
+- The conversation is held only in the browser and sent back each turn, so a
+  run abandoned midway saves nothing.
+- The system prompt is the `prompt-selfcheck` content item, filled with the org
+  name and the latest approved-tools list inside `<approved_tools>` data tags
+  (escaped so they cannot close the tag). The snapshot JSON format is appended
+  in code so it always matches validation.
+- Before an answer goes to the AI, the server warns if it looks like an email
+  address, an account number or pasted text; the respondent can edit or send
+  anyway.
+- The snapshot is validated with Zod; invalid output is retried once, then an
+  error is shown and nothing is saved. Heat (highest of the four scores) and
+  the summary counts in `scores` are computed in code. The run is tagged with
+  the cohort's current round.
+- `/selfcheck/pdf` renders the respondent's snapshot as a one-page PDF in Roboto
+  ("Self-reported; not an assessment."). It reads and stores nothing.
+- Admins can delete an organization's runs (one round or all) from the org
+  page; deletions are audit-logged.
+
+Set `ANTHROPIC_API_KEY` (and optionally `ANTHROPIC_MODEL`) to use Claude. For
+local work without a key, `AI_FAKE=1 npm run dev` uses a scripted model (never
+in production).
 
 ## Data model
 

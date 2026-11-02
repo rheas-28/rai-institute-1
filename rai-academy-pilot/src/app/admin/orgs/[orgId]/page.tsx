@@ -4,10 +4,12 @@ import { z } from "zod";
 import { ActionForm } from "@/components/action-form";
 import { Card } from "@/components/app-shell";
 import { Field, Notice, buttonClass, formatDate, inputClass, secondaryButtonClass } from "@/components/form";
+import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/server";
 import {
   addSponsorAction,
   createCohortAction,
+  deleteSelfcheckRunsAction,
   removeSponsorAction,
   setCohortRoundAction,
 } from "../../actions";
@@ -23,18 +25,20 @@ export default async function OrgPage({ params, searchParams }: Props) {
   if (!z.guid().safeParse(orgId).success) notFound();
 
   const supabase = await createClient();
-  const [{ data: org }, { data: packs }, { data: cohorts }, { data: sponsors }, { data: people }] = await Promise.all([
+  const [{ data: org }, { data: packs }, { data: cohorts }, { data: sponsors }, { data: people }, { data: runs }] = await Promise.all([
     supabase.from("organizations").select("id, name, sector").eq("id", orgId).maybeSingle(),
     supabase.from("client_packs").select("version, created_at, approved_tools").eq("org_id", orgId).order("version", { ascending: false }),
     supabase.from("cohorts").select("id, name, access_code, start_date, current_round, participants(id)").eq("org_id", orgId).order("created_at"),
     supabase.from("app_users").select("id, email, user_id").eq("org_id", orgId).eq("role", "sponsor").order("email"),
     supabase.from("participants").select("id, name, email, layer, role_title, user_id, cohorts(name)").eq("org_id", orgId).order("name"),
+    supabase.from("selfcheck_runs").select("round").eq("org_id", orgId),
   ]);
   if (!org) notFound();
 
   const importDetail =
     notice === "imported" && n ? `${Number(n) || 0} imported, ${Number(s) || 0} skipped.` : undefined;
   const latest = packs?.[0];
+  const runCount = (round: string) => runs?.filter((r) => r.round === round).length ?? 0;
 
   return (
     <div className="flex flex-col gap-6">
@@ -148,6 +152,36 @@ export default async function OrgPage({ params, searchParams }: Props) {
           <input type="hidden" name="org_id" value={orgId} />
           <Field label="Sponsor email" htmlFor="sponsor-email">
             <input id="sponsor-email" name="email" type="email" required className={inputClass} />
+          </Field>
+        </ActionForm>
+      </Card>
+
+      <Card title="Shadow AI Self-Check">
+        {!cohorts?.length ? (
+          <p className="mb-4 text-muted">Create a cohort to get a Self-Check link.</p>
+        ) : (
+          <ul className="mb-4 flex flex-col gap-1 text-sm">
+            {cohorts.map((c) => (
+              <li key={c.id}>
+                <span className="font-medium">{c.name}:</span>{" "}
+                <code className="break-all">{`${publicEnv.siteUrl()}/selfcheck?code=${c.access_code}`}</code>
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="mb-4">
+          Runs saved: {runCount("baseline")} baseline, {runCount("readout")} readout. Runs are anonymous and only
+          shown to sponsors as totals.
+        </p>
+        <ActionForm action={deleteSelfcheckRunsAction} submitLabel="Delete runs" pendingLabel="Deleting…" secondary resetOnSuccess={false}
+          className="flex flex-wrap items-end gap-2" confirm="Delete these Self-Check runs? This can't be undone.">
+          <input type="hidden" name="org_id" value={orgId} />
+          <Field label="Delete Self-Check runs for" htmlFor="delete-round">
+            <select id="delete-round" name="round" defaultValue="all" className={inputClass}>
+              <option value="all">All rounds</option>
+              <option value="baseline">Baseline only</option>
+              <option value="readout">Readout only</option>
+            </select>
           </Field>
         </ActionForm>
       </Card>

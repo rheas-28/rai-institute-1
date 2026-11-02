@@ -187,3 +187,14 @@ export async function saveContentAction(_prev: ActionState, form: FormData): Pro
   revalidatePath("/admin/content");
   redirect("/admin/content?notice=content-saved");
 }
+
+export async function deleteSelfcheckRunsAction(_prev: ActionState, form: FormData): Promise<ActionState> {
+  const result = await guard(async () => {
+    const orgId = id(form, "org_id");
+    const r = await admin.deleteSelfcheckRuns(await adminDb(), orgId, str(form, "round"));
+    revalidatePath(`/admin/orgs/${orgId}`);
+    return r;
+  });
+  if (isState(result)) return result;
+  return result.ok ? { status: "ok", message: `Deleted ${result.data.deleted} Self-Check run(s).` } : error(result.error);
+}

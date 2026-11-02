@@ -274,3 +274,28 @@ export async function saveContentItem(
   });
   return ok({ id });
 }
+
+const roundOrAll = z.enum(["baseline", "readout", "all"], "Choose a round");
+
+/** Retention: deletes an organization's Self-Check runs (one round or all). Logged. */
+export async function deleteSelfcheckRuns(
+  db: Db,
+  orgId: string,
+  round: unknown
+): Promise<Result<{ deleted: number }>> {
+  const parsed = roundOrAll.safeParse(round);
+  if (!parsed.success) return fail(firstIssue(parsed.error));
+  const { data: isAdmin } = await db.rpc("is_admin");
+  if (isAdmin !== true) return fail("Only RAI admins can delete Self-Check runs.");
+  let query = db.from("selfcheck_runs").delete().eq("org_id", orgId);
+  if (parsed.data !== "all") query = query.eq("round", parsed.data);
+  const { data, error } = await query.select("id");
+  if (error) return fail("Could not delete the Self-Check runs.");
+  const deleted = data?.length ?? 0;
+  await logAudit(db, {
+    orgId,
+    action: "selfcheck.delete_runs",
+    target: `${deleted} run(s), round: ${parsed.data}`,
+  });
+  return ok({ deleted });
+}
